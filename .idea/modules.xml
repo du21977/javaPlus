@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_main.iml" group="Thread" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />
+    </modules>
+  </component>
+</project>
