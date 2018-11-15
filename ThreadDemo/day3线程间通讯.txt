@@ -1,0 +1,22 @@
+day3
+线程间通信
+
+wait ,notify,notifyAll
+
+wait(),线程阻塞，配合多线同步synchronized的一起使用，会释放锁
+notify，notifyAll会唤醒其他阻塞的线程
+
+wait属于Obiect,sleep属于Thread
+
+
+线程停止
+1.可以开一个标志位
+2.可以使用stop，不过已经过时，因为没有她没有异常处理机制
+3.使用interrupt
+
+
+线程分为两种，一种是守护线程，一种是用户线程
+
+守护线程
+ 守护线程是为其他线程服务的线程
+ 其他所有非守护线程结束了，守护线程结束，虚拟机退出,gc其实也是守护线程

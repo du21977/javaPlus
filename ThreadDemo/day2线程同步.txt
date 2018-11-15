@@ -15,3 +15,20 @@ day2
 
 
  死锁
+同步代码块中嵌套同步代码块，这样一个线程要持有2个锁，如果其他线程也持有这两把锁，并且获取锁的顺序不一致，就会造成死锁
+ 死锁解决方式1--用thread1.join()该线程thread1先执行，其他线程等待，该线程执行完后，其他线程才能执行
+ 死锁解决方式2--用ReentrantLock，加锁时限（线程尝试获取锁的时候加上一定的时限，超过时限则放弃对该锁的请求，并释放自己占有的锁）
+
+
+synchronized不能手动开锁解锁,而且还有性能问题
+而lock需要手动开锁和解锁
+
+java1.5  并发包：Lock  , 线程池Executor ，Condition，AtomicInteager
+
+Condition condition = lock.newCondition();
+condition.await()在lock中使用------类似在synchronized中使用wait
+condition.signal()在lock中使用------类似在synchronized中使用notify()
+condition.signalAll()在lock中使用------类似在synchronized中使用notifyAll()
+
+
+

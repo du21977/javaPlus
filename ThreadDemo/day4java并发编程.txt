@@ -1,0 +1,29 @@
+
+线程的三大特性：
+原子性：一个操作或多个操作要么全部执行要么全部不执行，银行转账问题----利用synchronized和lock来保证这个特性
+可见性：一个线程修改了值，另一个线程看不见
+有序性：
+
+volatile关键字只有线程可见性和禁止重排序，不具备原子性，
+synchronized具备线程可见性和原子性，不具备禁止重排序
+synchronized加锁前会将工作内存的值清除，从主内存中获取最新值
+解锁时，会将共享变量的最新值刷新到主内存中
+
+AtomicInteager,AtomicBoolean等类具备原子性
+
+AtomicInteger atomicInteger = new AtomicInteger(0); //就是定义一个变量0
+atomicInteger.incrementAndGet();//相当于i++
+
+
+ThreadLocal每个线程都维护一个本地变量，每个线程修改本地变量而能达到线程间互不影响的效果
+ThreadLocal的底层原理：
+ThreadLocal通过Map集合，Map.put("当前线程",值)
+ThreadLocal的set方法的源码
+ public void set(T value) {
+        Thread t = Thread.currentThread();  //当前线程作为key，值为我们自己设置的值
+        ThreadLocalMap map = getMap(t);
+        if (map != null)
+            map.set(this, value);
+        else
+            createMap(t, value);
+    }
