@@ -22,6 +22,7 @@ day2
 
 synchronized不能手动开锁解锁,而且还有性能问题
 而lock需要手动开锁和解锁
+线程同步，降低了程序的效率，1.阻塞，2.抢锁的资源
 
 java1.5  并发包：Lock  , 线程池Executor ，Condition，AtomicInteager
 

@@ -2,7 +2,7 @@ day3
 线程间通信
 
 wait ,notify,notifyAll
-
+很多应用与生产者消费者模型
 wait(),线程阻塞，配合多线同步synchronized的一起使用，会释放锁
 notify，notifyAll会唤醒其他阻塞的线程
 
