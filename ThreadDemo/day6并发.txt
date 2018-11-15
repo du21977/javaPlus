@@ -1,0 +1,40 @@
+
+第二期增加的知识点
+
+Vector与ArrayList的区别
+实现原理都是通过数组实现，查询快，增删慢
+区别：线程安全问题
+Vector是安全(上锁了的集合)，效率低，点源码查看的add,get方法上加了synchronized
+ArrayList线程安全，效率高
+
+HashTable和HashMap的区别
+底层是链表加数组实现
+一致性取模算法，hashcode去摸得到下标位置
+HashTable是线程安全的 ，效率低，点源码查看的put,get方法上加了synchronized
+HashMap是线程不安全的
+
+Collections.synchronizedMap()将不安全的map集合转成安全集合----效率低，有锁的资源竞争
+
+ConcurrentHashMap同步的HashMap------效率高，减少了锁的资源竞争，jdk1.5并发包出现的
+原理：采用分段锁，怎么分，分16段
+将一个ConcurrentHashMap整体拆分成多个小的HashTable，默认分成16段
+例如将下标为0-4作为一个HashTable,下标4-8作为一个HashTable,等等。。。
+默认是16个小的HashTable,各个小的HashTable用的不同的锁，这就是分段锁机制
+
+CountDownLatch jdk1.5并发包下的
+利用他可以实现类似计数器的功能，比如有一个任务，要等其他四个任务执行完毕后执行，
+此时就可以用CountDownLatch
+
+CyclicBarrier --等所有线程执行完毕后，才执行遗留代码
+
+Semaphore（**挺重要）计数的信号量
+
+并发队列 ：一种大小有限制，一种没有有大小限制,都是线程安全的
+阻塞队列：BlockQueue--队列满了(生产者阻塞)或队列空(消费者阻塞)了后，就等待操作，进入阻塞
+非阻塞队列：ConcurrentLinkDueue 无大小限制同步队列，有锁
+
+java1.5  并发包：Lock  , 线程池Executor ，Condition，AtomicInteager，ConcurrentHashMap
+CountDownLatch  CyclicBarrier Semaphore
+
+生产者消费者
+用阻塞队列实现，之前用的wait,notify实现的

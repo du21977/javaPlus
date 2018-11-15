@@ -2,7 +2,7 @@
 线程的三大特性：
 原子性：一个操作或多个操作要么全部执行要么全部不执行，银行转账问题----利用synchronized和lock来保证这个特性
 可见性：一个线程修改了值，另一个线程看不见
-有序性：
+有序性：jvm编译优化的时候，可能将代码排序，禁止重排序用volatite，重排序一般出现在多线程
 
 volatile关键字只有线程可见性和禁止重排序，不具备原子性，
 synchronized具备线程可见性和原子性，不具备禁止重排序
@@ -30,4 +30,4 @@ ThreadLocal的set方法的源码
 
 
 
-java1.5  并发包：Lock  , 线程池Executor ，Condition，AtomicInteager
+java1.5  并发包：Lock  , 线程池Executor ，Condition，AtomicInteager，ConcurrentHashMap
