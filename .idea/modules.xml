@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" group="AnnotationDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" group="AnnotationDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesignPattern.iml" filepath="$PROJECT_DIR$/.idea/modules/DesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesignPattern_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DesignPattern_main.iml" group="DesignPattern" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesignPattern_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DesignPattern_test.iml" group="DesignPattern" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" group="SpringIOC" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC_test.iml" group="SpringIOC" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_main.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />

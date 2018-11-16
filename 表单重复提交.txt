@@ -1,0 +1,11 @@
+
+用Token加session可以防止表单重复提交
+
+利用uuid生成一个 Token
+将Token存到session中，并返回给客户端
+
+用户进这个页面时服务器就会给一个token，点击提交按钮会把token带到服务器
+
+客户端点击提交按钮来带上Token,然后在session中查看Token,对比两个token
+如果两个token相同，执行数据库操作，然后清除session中的token
+下次提交后对比两个token，不同则重复提交了

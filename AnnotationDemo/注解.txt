@@ -1,0 +1,19 @@
+
+
+注解分为：
+元注解--java自带注解
+自定义注解
+
+
+ //元注解
+//    //使用@Target定义Annotation可以被应用于源码的哪个位置
+//    //类或者接口----ElementType.TYPE
+//    //字段-----ElementType。FIELD
+//    //方法-----ElementType.METHOD
+//    //构造方法----ElementType.CONSTRUCTOR
+//    //方法参数-----ElementType.PARAMETER
+//
+//    //使用@Retention定义Annotion的生命周期
+//    //1.仅编译期：RetentionPolicy.SOURCE
+//    //2.仅仅class文件  RetentionPolicy.CLASS ----默认
+//    //3.运行期  RetentionPolicy.RUNTIME  ----通常自定义是这个

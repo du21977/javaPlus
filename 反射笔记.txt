@@ -1,0 +1,53 @@
+
+什么是反射
+就是程序运行期间，动态获取类的信息
+
+反射机制的作用
+1.反编译 .class--> .java
+2.通过反射机制访问java对象的属性，方法、构造方法等
+
+反射的应用场景
+jdbc加载驱动  class.forName("驱动类的完整路径")
+Spring IOC
+框架
+注解的底层实现
+
+反射使用：
+Class<?> forName = class.forName("类的完整路径"); //拿到类的字节码文件
+Object obj = forName.newInstance();  //这个调的是无参构造函数
+obj.公用方法 就调用到了
+
+调用有参构造怎么办？
+Constructor<？> constructor = forName.getConstructor(String.class参数类型的字节码文件);
+Object obj = constructor.newInstance("du")
+getDeclaredConstructors()----获取所有Constructor ,包括私有的
+
+获取类的所有方法
+forName.getClaredMethods()
+
+
+//通过Class实例获取Constructor信息
+//    //getConstructor();---获取public的Construct
+//    //getDeclaredConstructors()----获取所有Constructor ,包括私有的
+//    //contuctor.setAccessible(true)  通过设置setAccessible(true)来访问非public构造方法
+//    //getConstructor(xx.class);---获取单个public的Construct
+//    //getDeclaredConstructors(xx.class)----获取单个Constructor ,包括私有的
+//    //通过构造方法创建实例对象
+//    //constructor.newInstance();
+ //通过Class实例cls获取字段(成员变量)信息并调用
+//    //Field[] xx = cls.getFields()----获取所有public字段
+//    //cls.getDeclaredFields()----获取所有字段,包含private
+//    //cls.getFeild(xx) //获取单个public字段
+//    //cls.getDeclaredFeild(xx)  //获取单个字段，可以是private
+//    //field.setAccessible(true)  //暴力解除private
+//    //field.set(对象名，)
+//
+//    //通过Class实例cls获取成员方法并调用
+//    //Method[] xx = cls.getMethods()  ---获取所有public方法
+//    //cls.getDeclaredMethods()  ---获取所有方法,包括private
+//    //cls.getMethods("方法名",xx.class)  ---获取某个public方法
+//    //cls.getDeclaredMethods("方法名",xx.class)  ---获取某个方法，包括私有
+//    //mothod.invoke(对象名，方法实参)----调用方法
+//    //mothod.setAccessible(true)  //暴力解除private
+
+反射的缺点：效率比直接new低
