@@ -10,3 +10,30 @@ SpringBoot作用：
 
 必须要引入继承springboot-parent,因为他帮我们实现了很多jar的依赖管理，解决了jar版本的冲突
 
+访问静态资源：在resources目录下建文件夹
+/static
+/public
+/resources
+/META-INF/resources
+
+
+全局异常拦截
+@ControllerAdvice
+@ExceptionHandler(RuntimeException.class)
+
+
+什么是模板引擎
+就是动态页面静态化-----貌似底层转化成html
+为什么要用这个，貌似SpringBoot中jsp不太好用---SpringBoot官方不推荐使用jsp
+
+SpringBoot中提供的模板引擎
+Thymeleaf ---在jvaee--httpDemo中有用到
+FreeMarker----对应ftl吗
+Groovy
+
+jsp底层通过servlet
+ftl底层转化成html
+
+
+
+
