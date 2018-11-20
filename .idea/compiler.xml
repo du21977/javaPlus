@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringBootDemo" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AnnotationDemo_main" target="1.8" />
       <module name="AnnotationDemo_test" target="1.8" />
@@ -10,6 +18,7 @@
       <module name="JavaPlus_test" target="1.8" />
       <module name="SocketDemo_main" target="1.8" />
       <module name="SocketDemo_test" target="1.8" />
+      <module name="SpringBootDemo" target="1.6" />
       <module name="SpringIOC_main" target="1.8" />
       <module name="SpringIOC_test" target="1.8" />
       <module name="Thread_main" target="1.8" />

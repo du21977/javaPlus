@@ -1,0 +1,12 @@
+
+为什么要有SpringBoot
+简化xml配置，提高开发效率
+
+SpringBoot作用：
+简化xml配置，提高开发效率
+独立的应用程序，单独的war工程，不需要集成tomcat插件运行，内嵌tomcat，无需部署war文件
+简化Maven配置，减少jar包冲突
+自动配置Spring
+
+必须要引入继承springboot-parent,因为他帮我们实现了很多jar的依赖管理，解决了jar版本的冲突
+
