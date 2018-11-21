@@ -1,0 +1,11 @@
+
+
+多个tomcat访问同一个缓存redis，redis有ip有端口呀
+
+负载均衡这么多服务器怎样做session共享呢？
+1.重写session,第一次创建session，往redis里面缓存一份，而且两个的过期时间设置一致
+2.第二次，先从session里面找，如果没有，再去redis里面去找
+
+spring-session解决这个问题，SpringBoot用起来非常简单
+
+见SpringBootSessionDemo

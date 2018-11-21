@@ -12,6 +12,7 @@
         <module name="NginxDemo" />
         <module name="RedisDemo" />
         <module name="SpringBootDemo" />
+        <module name="SpringBootSessionDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="SpringBootDemo" target="1.6" />
       <module name="SpringBootDemo1" target="1.7" />
       <module name="SpringBootDemo2" target="1.7" />
+      <module name="SpringBootSessionDemo" target="1.6" />
       <module name="SpringIOC_main" target="1.8" />
       <module name="SpringIOC_test" target="1.8" />
       <module name="Thread_main" target="1.8" />
