@@ -4,3 +4,6 @@ spring:
     user: admin
     password: admin
 queue: du21977queue
+
+server:
+  port: 8081
