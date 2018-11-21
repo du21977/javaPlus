@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ActiveMQDemo/ActiveMQDemo.iml" filepath="$PROJECT_DIR$/ActiveMQDemo/ActiveMQDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" group="AnnotationDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" group="AnnotationDemo" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
+      <module fileurl="file://$PROJECT_DIR$/RedisDemo/RedisDemo.iml" filepath="$PROJECT_DIR$/RedisDemo/RedisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo_main.iml" group="SocketDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo_test.iml" group="SocketDemo" />

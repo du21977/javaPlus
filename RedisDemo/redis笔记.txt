@@ -1,0 +1,79 @@
+
+为什么要用redis
+减轻数据库访问压力，属于高并发解决方案中的一种
+操作数据库是在做IO操作
+缓存技术是在做内存操作，比IO操作快
+
+高并发第一种解决方案就是缓存
+
+三年工作经验掌握：
+高并发，缓存---包括
+redis,mongdb(主要存json),ActiveMQ,kafuka,nginx,zp
+
+
+NOSQL的几种数据库
+redis,mongdb,memcached,Hbase
+
+redis与memcached区别
+redis可以做持久化(保存到硬盘)，比memcached支持的数据类型更加丰富
+memcached不能做持久化
+
+redis的应用场景
+session共享
+验证码存在redis---有过期时间
+
+redis的使用
+双击redis-cli.exe
+输入auth root 验证密码--此处root是我设置的密码
+
+redis基本数据类型
+String--用的最多
+List
+Set
+sort set 有序集合
+Hash
+
+redis是以key --value形式进行存储的
+String类型使用：
+set mykey "redis"
+get mykey
+
+List的使用
+LPUSH listKey redis
+LPUSH listKey mongdb
+
+Set的使用： ------无序不重复元素
+SADD setKey redis
+SADD setKey mongdb
+SADD setKey mysql
+SMEMBERS setKey
+
+set setKey 15 10 -----给setKey存10，但是只有15s时间
+
+sort set使用：----有序不重复元素
+ZADD setKey1  1 du
+ZADD setKey1 2 he
+ZADD setKey1 3 ha
+
+HASH的使用：
+hset hsetKey1 mapKey1 666
+hset hsetKey1 mapKey2 777
+
+
+
+jedis是操作redis的一个插件
+
+
+蚂蚁课糖第一期第9节了--未看
+
+
+
+
+
+
+
+
+
+
+
+

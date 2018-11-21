@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ActiveMQDemo" />
+        <module name="RedisDemo" />
         <module name="SpringBootDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ActiveMQDemo" target="1.5" />
       <module name="AnnotationDemo_main" target="1.8" />
       <module name="AnnotationDemo_test" target="1.8" />
       <module name="DesignPattern_main" target="1.8" />
       <module name="DesignPattern_test" target="1.8" />
       <module name="JavaPlus_main" target="1.8" />
       <module name="JavaPlus_test" target="1.8" />
+      <module name="RedisDemo" target="1.6" />
       <module name="SocketDemo_main" target="1.8" />
       <module name="SocketDemo_test" target="1.8" />
       <module name="SpringBootDemo" target="1.6" />
