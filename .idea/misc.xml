@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/ActiveMQDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ActiveMQConsumerDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ActiveMQProducerDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/NignxDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/NginxDemo/pom.xml" />
       </list>
     </option>
   </component>
