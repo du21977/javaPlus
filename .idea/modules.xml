@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ActiveMQDemo/ActiveMQDemo.iml" filepath="$PROJECT_DIR$/ActiveMQDemo/ActiveMQDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActiveMQConsumerDemo/ActiveMQConsumerDemo.iml" filepath="$PROJECT_DIR$/ActiveMQConsumerDemo/ActiveMQConsumerDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActiveMQProducerDemo/ActiveMQProducerDemo.iml" filepath="$PROJECT_DIR$/ActiveMQProducerDemo/ActiveMQProducerDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_main.iml" group="AnnotationDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AnnotationDemo_test.iml" group="AnnotationDemo" />

@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/SpringBootDemo/pom.xml" />
         <option value="$PROJECT_DIR$/RedisDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ActiveMQDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/ActiveMQConsumerDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/ActiveMQProducerDemo/pom.xml" />
       </list>
     </option>
   </component>
