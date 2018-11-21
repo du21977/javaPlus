@@ -19,7 +19,8 @@
 
 tomcat服务器挂了怎么办，nginx通过心跳检测，请求转到其他tomcat服务器上去，在nginx上配置超时时间，请求超时后，会自动换到其他tomcat服务器上
 
-nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一般不止一台，一般有一主一备或多备
+nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一般不止一台，一般有一主一备或多备，keeoalived转到备nginx
+,每台nginx都有keepalived,这些keepalived共享一个ip---LVS，有一台nginx挂了后，keepalived会自动重启nginx
 
 
 高并发解决方案：
