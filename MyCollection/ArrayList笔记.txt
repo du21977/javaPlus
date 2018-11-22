@@ -1,0 +1,28 @@
+
+
+ArrayList
+默认容量大小10
+扩容1.5倍
+oldCapacity + (oldCapacity >> 1)
+>>右移1位除以2
+
+面试题：
+当容量为1的时候怎么扩容
+// 1.判断实际存放的数据容量是否大于elementData容量
+        size + 1是保证最小的容量都是+1，所以传参size+1，但是全局变量size没有变
+		ensureExplicitCapacity(size + 1);
+    // int minCapacity 最当前size+1
+	private void ensureExplicitCapacity(int minCapacity) {
+		if (size == elementData.length) {
+			// 原来本身elementData容量大小 2
+			int oldCapacity = elementData.length;
+			// 新数据容量大小 (oldCapacity >> 1)=oldCapacity/
+			int newCapacity = oldCapacity + (oldCapacity >> 1);// (2+2/2)=3
+			// 如果初始容量为1的时候,那么他扩容的大小为多少呢？
+			//如果扩容的容量大小比最小需要的容量还小，就需要执行下面------就是考虑1的情况
+			if (newCapacity - minCapacity < 0)
+				newCapacity = minCapacity; // 最少保证容量和minCapacity一样
+			// 将老数组的值赋值到新数组里面去
+			elementData = Arrays.copyOf(elementData, newCapacity);
+		}
+	}

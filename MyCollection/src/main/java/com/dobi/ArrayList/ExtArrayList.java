@@ -43,6 +43,10 @@ public class ExtArrayList<E> implements ExtList<E> {
 		size++;
 	}
 
+	/**
+	 * 扩容------oldCapacity + (oldCapacity >> 1)
+	 * @param minCapacity
+	 */
 	// int minCapacity 最当前size+1
 	private void ensureExplicitCapacity(int minCapacity) {
 		if (size == elementData.length) {
@@ -51,6 +55,7 @@ public class ExtArrayList<E> implements ExtList<E> {
 			// 新数据容量大小 (oldCapacity >> 1)=oldCapacity/
 			int newCapacity = oldCapacity + (oldCapacity >> 1);// (2+2/2)=3
 			// 如果初始容量为1的时候,那么他扩容的大小为多少呢？
+			////如果扩容的容量大小比最小需要的容量还小，就需要执行下面
 			if (newCapacity - minCapacity < 0)
 				newCapacity = minCapacity; // 最少保证容量和minCapacity一样
 			// 将老数组的值赋值到新数组里面去
