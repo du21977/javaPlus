@@ -1,0 +1,12 @@
+
+
+HashMap
+底层 JDK1.7 用的是数组+链表
+     JDK1.8 用的是数组+红黑树
+
+HashMap 扩容技术  负载因子0.75
+
+HashCode冲突(碰撞)
+
+HashCode相同，对象不一定相同
+equals相同，hashcode一定相同

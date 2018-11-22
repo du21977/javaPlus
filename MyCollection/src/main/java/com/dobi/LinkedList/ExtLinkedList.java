@@ -107,6 +107,13 @@ public class ExtLinkedList<E> {
 			Node oldNextNode = oldNode.next;
 			// node1
 			Node oldPrevNode = oldNode.prev;
+
+			//简化版
+//			oldPrevNode.next = oldNextNode;
+//            oldNextNode.prev = oldPrevNode;
+
+            //复杂版
+
 			// 将node1 的下一个节点变为node3
 			if (oldPrevNode == null) {
 				// 删除一个元素 从换换头

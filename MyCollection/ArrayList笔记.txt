@@ -1,4 +1,5 @@
 
+ArrayList 底层用的 数组+扩容技术
 
 ArrayList
 默认容量大小10
