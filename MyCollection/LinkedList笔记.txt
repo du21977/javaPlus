@@ -1,0 +1,14 @@
+
+
+数组特性：内存连续，查询快(有下标--内存地址连续)
+
+LinkedList-------中包含
+// 链表实际存储元素
+private int size;
+// 第一个元素(头节点,为了查询开始)
+private Node first;
+// 最后一个元素(头节点,为添加开始)
+private Node last;
+
+为什么要有first Node  为了查询，从头 开始查询
+为什么要有last Node    为了添加元素
