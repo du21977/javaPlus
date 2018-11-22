@@ -7,7 +7,7 @@ oldCapacity + (oldCapacity >> 1)
 >>右移1位除以2
 
 面试题：
-当容量为1的时候怎么扩容
+当ArrayList容量为1的时候怎么扩容
 // 1.判断实际存放的数据容量是否大于elementData容量
         size + 1是保证最小的容量都是+1，所以传参size+1，但是全局变量size没有变
 		ensureExplicitCapacity(size + 1);
@@ -26,3 +26,8 @@ oldCapacity + (oldCapacity >> 1)
 			elementData = Arrays.copyOf(elementData, newCapacity);
 		}
 	}
+
+
+ArrayList 和 Vector区别
+ArrayList线程不安全，默认扩容1.5倍
+Vector线程安全，默认扩容2倍，方法上加了synchronized
