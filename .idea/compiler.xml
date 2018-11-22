@@ -9,10 +9,12 @@
         <module name="ActiveMQConsumerDemo" />
         <module name="ActiveMQDemo" />
         <module name="ActiveMQProducerDemo" />
+        <module name="MyCollection" />
         <module name="NginxDemo" />
         <module name="RedisDemo" />
         <module name="SpringBootDemo" />
         <module name="SpringBootSessionDemo" />
+        <module name="ZookeeperDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +27,7 @@
       <module name="DesignPattern_test" target="1.8" />
       <module name="JavaPlus_main" target="1.8" />
       <module name="JavaPlus_test" target="1.8" />
+      <module name="MyCollection" target="1.5" />
       <module name="NginxDemo" target="1.5" />
       <module name="NignxDemo" target="1.5" />
       <module name="RedisDemo" target="1.6" />
@@ -38,6 +41,7 @@
       <module name="SpringIOC_test" target="1.8" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />
+      <module name="ZookeeperDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
