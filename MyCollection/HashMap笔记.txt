@@ -10,3 +10,15 @@ HashCode冲突(碰撞)
 
 HashCode相同，对象不一定相同
 equals相同，hashcode一定相同
+
+
+hashcode
+通过hash算法(散列算法)获取，就是xx.hash()，那么通过hashcode怎么定位数组下标呢，这里一般是hash取模获取余数
+如果不这么做的话，那么数组将是巨大的，内存受不了，这就是我们常用的重写hashcode
+
+我们说的hashcode冲突，一般是只指重写后的hashcode
+
+原理：数组+链表
+通过hash函数求hashcode，然后重写hashcode，一般是给一个数取余，得到我们自己的hashcode
+hashcode对应数组的索引值，如果hashcode相同，会在对应数组索引后面添加一个链表，重复hashcode元素放在链表中，
+放之前会比较该链表中是否有相同的值，如果有的话，就覆盖，没有的话，再就在链表中添加这个值

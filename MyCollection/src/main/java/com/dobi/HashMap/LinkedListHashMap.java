@@ -10,7 +10,7 @@ import java.util.LinkedList;
 @SuppressWarnings("rawtypes")
 public class LinkedListHashMap {
 
-	// Map存放Entry对象
+	// Map存放Entry对象-------搞一个数组，数组里面都是链表
 	@SuppressWarnings("unchecked")
 	LinkedList<com.dobi.HashMap.Entry>[] tables = new LinkedList[998];
 
