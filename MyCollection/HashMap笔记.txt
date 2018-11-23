@@ -22,3 +22,11 @@ hashcode
 通过hash函数求hashcode，然后重写hashcode，一般是给一个数取余，得到我们自己的hashcode
 hashcode对应数组的索引值，如果hashcode相同，会在对应数组索引后面添加一个链表，重复hashcode元素放在链表中，
 放之前会比较该链表中是否有相同的值，如果有的话，就覆盖，没有的话，再就在链表中添加这个值
+
+
+HashMap与LinkedHashMap的区别
+区别是，LinkedHashMap是存和遍历有序，HashMap是无序的
+
+原因是HashMap底层用的那个链表是单向链表，LinkedHashMap的链表是双向链表，每添加一个元素，都会有before节点
+
+
