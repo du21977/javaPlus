@@ -3,7 +3,7 @@ package com.dobi.HashMap;
 import java.util.LinkedList;
 
 /**
- * 基于LinkedList实现HashMap(效率低)<br>
+ * 基于数组和LinkedList实现HashMap(效率低)<br>----基本原理很类似JDK中的原理了---只是将LinkedList替代了单链表
  * jdk 1.7的时候，hasmap使用数组+链表方式实现<br>
  *
  */

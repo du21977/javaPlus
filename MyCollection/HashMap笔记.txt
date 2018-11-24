@@ -13,7 +13,7 @@ equals相同，hashcode一定相同
 
 
 hashcode
-通过hash算法(散列算法)获取，就是xx.hash()，那么通过hashcode怎么定位数组下标呢，这里一般是hash取模获取余数
+通过hash算法(散列算法)获取，就是xx.hashcode()，那么通过hashcode怎么定位数组下标呢，这里一般是hash取模获取余数
 如果不这么做的话，那么数组将是巨大的，内存受不了，这就是我们常用的重写hashcode
 
 我们说的hashcode冲突，一般是只指重写后的hashcode
@@ -21,12 +21,35 @@ hashcode
 原理：数组+链表
 通过hash函数求hashcode，然后重写hashcode，一般是给一个数取余，得到我们自己的hashcode
 hashcode对应数组的索引值，如果hashcode相同，会在对应数组索引后面添加一个链表，重复hashcode元素放在链表中，
-放之前会比较该链表中是否有相同的值，如果有的话，就覆盖，没有的话，再就在链表中添加这个值
+放之前会比较该链表中是否有相同的key，如果有的话，就覆盖对应的value，没有的话，再就在链表中添加这个key和value，即直接添加一个Entry对象
 
+默认x.hashcode()貌似取的是ASSII码，因为测试a=97等等
 
 HashMap与LinkedHashMap的区别
 区别是，LinkedHashMap是存和遍历有序，HashMap是无序的
 
 原因是HashMap底层用的那个链表是单向链表，LinkedHashMap的链表是双向链表，每添加一个元素，都会有before节点
+
+-----------------------------------------------------------------------
+JDK1.7版本-----采用数组+单链表
+为什么采用单链表，因为不要用上一个节点信息
+步骤：
+1.先定义数组(数组里面是Node单链表)
+2.链表里面放什么数据，在hashcode相同的情况下，链表都是节点Node组成嘛，节点Node里面有存Entry，NodeNext，Entry里面有key,value,，
+3.使用取模算法
+int index = key.hashCode%数组.length; //实际的下标位置
+如果发生hash碰撞（冲突），就以链表方式存储
+
+链表中的node怎么存的呢？
+新加进来的node.next = oldNode
+table[index] = node
+所以新加进来的node都在table[index]那个点上，也就是链表头，前面加进来的都在链表的末尾
+
+hashmap如果key为null,会插入到数组index=0的位置
+
+查询怎么查？
+通过key定位到hashcode对应的数组index，就可以获得链表首node，然后循环node.next查询
+
+
 
 
