@@ -12,7 +12,9 @@ import org.dom4j.io.SAXReader;
 
 
 /**
- * 手写Spring IOC
+ * 手写Spring IOC----xml版本
+ * 1.解析xml文件，找到相应的类全路径
+  *2.通过反射创建实例，并给属性赋值
  */
 
 public class ClassPathXmlApplicationContext {

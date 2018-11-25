@@ -12,8 +12,11 @@
         <module name="MyCollection" />
         <module name="NginxDemo" />
         <module name="RedisDemo" />
+        <module name="SpringAOPTransactionDemo" />
         <module name="SpringBootDemo" />
         <module name="SpringBootSessionDemo" />
+        <module name="SpringDemo" />
+        <module name="SpringIOCDemo" />
         <module name="ZookeeperDemo" />
       </profile>
     </annotationProcessing>
@@ -33,12 +36,16 @@
       <module name="RedisDemo" target="1.6" />
       <module name="SocketDemo_main" target="1.8" />
       <module name="SocketDemo_test" target="1.8" />
+      <module name="SpringAOPDemo" target="1.5" />
+      <module name="SpringAOPTransactionDemo" target="1.5" />
       <module name="SpringBootDemo" target="1.6" />
       <module name="SpringBootDemo1" target="1.7" />
       <module name="SpringBootDemo2" target="1.7" />
       <module name="SpringBootSessionDemo" target="1.6" />
+      <module name="SpringDemo" target="1.5" />
       <module name="SpringIOC_main" target="1.8" />
       <module name="SpringIOC_test" target="1.8" />
+      <module name="SpringIOCDemo" target="1.5" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />
       <module name="ZookeeperDemo" target="1.5" />

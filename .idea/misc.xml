@@ -18,6 +18,9 @@
         <option value="$PROJECT_DIR$/SpringBootSessionDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ZookeeperDemo/pom.xml" />
         <option value="$PROJECT_DIR$/MyCollection/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAOPTransactionDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringIOCDemo/pom.xml" />
       </list>
     </option>
   </component>
