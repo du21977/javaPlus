@@ -11,7 +11,7 @@ public class ExtHashMap<K, V> implements ExtMap<K, V> {
 	// 2. 实际用到table 存储容量 大小
 	int size;
 	// 3.HashMap默认负载因子，负载因子越小，hash冲突机率越低， 根据每个链表的个数
-	float DEFAULT_LOAD_FACTOR = 0.5f;
+	float DEFAULT_LOAD_FACTOR = 0.75f;
 	// 4.table默认初始大小 16  --- 1<<4 =16-----指的是1左移4位
 	static int DEFAULT_INITIAL_CAPACITY = 16; // 16
 
@@ -29,6 +29,7 @@ public class ExtHashMap<K, V> implements ExtMap<K, V> {
 		if (size > (DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY)) {
 			// 需要开始对table进行属数组扩容
 			resize();
+			System.out.println("扩容啦");
 		}
 
 		// 3.计算hash值指定下标位置
@@ -78,6 +79,7 @@ public class ExtHashMap<K, V> implements ExtMap<K, V> {
 			Node<K, V> oldNode = table[i];
 			// a 的index=1 b 的index=1
 			// a ##
+			//开始循环链表啦
 			while (oldNode != null) {
 				table[i] = null;// 赋值为null---为了垃圾回收机制能够回收 将之前的node删除
 				// 存放在之前的table 原来的node key
@@ -91,6 +93,7 @@ public class ExtHashMap<K, V> implements ExtMap<K, V> {
 				Node<K, V> oldNext = oldNode.next;
 				// 如果ndex 下标在新newTable发生相同的index时候,以链表进行存储 //
 				// 原来的node的下一个是最新的（原来的node存放下新的node下一个）
+				//就相当于newNode.next = oldNode 新节点的下一个节点=老节点，这样就形成节点相连，变链表啦
 				oldNode.next = newTable[index];
 				// 将之前的node赋值给 newTable[index]
 				newTable[index] = oldNode;

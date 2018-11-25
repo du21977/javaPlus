@@ -69,4 +69,12 @@ hashmap如果key为null,会插入到数组index=0的位置
 
 
 
+为什么扩容是2的幂次方
+源码中数组取下标是按位运算，hashcode&(length-1),只有当长度是2的倍数的时候，length-1的二进制才是1111...n个1
+，这样相与出来才是hashcode本身，这里的本身是hashcode取那后面的n位，这样才能把n的位置(下标index)取遍，达到了
+增加散列，降低碰撞率的目的，否则总有index取不到造成空间的浪费，碰撞率很高
+有这么个表达式：hashcode&(length-1) = hashcode%length ,当且仅当length = 2的N次方
+
+
+
 

@@ -1,5 +1,8 @@
 package com.dobi.HashMap1_7;
 
+/**
+ * hashmap扩容效果
+ */
 public class Test003 {
 
 	@SuppressWarnings("unchecked")
