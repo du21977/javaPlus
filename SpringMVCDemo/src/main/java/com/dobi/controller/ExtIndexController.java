@@ -9,7 +9,7 @@ import com.dobi.extspringmvc.extannotation.ExtRequestMapping;
 public class ExtIndexController {
 	//ext/test/?name=122&age=6440654
 	@ExtRequestMapping("/test")
-	public String test(String name,Integer age) {
+	public String test() {
 		System.out.println("手写springmvc框架...");
 		return "index";
 	}

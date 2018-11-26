@@ -89,6 +89,7 @@ public class ExtDispatcherServlet extends HttpServlet {
 		// 根路径
 		String prefix = "/";
 		String suffix = ".jsp";
+		//请求转发
 		req.getRequestDispatcher(prefix + pageName + suffix).forward(req, res);
 	}
 
@@ -144,7 +145,7 @@ public class ExtDispatcherServlet extends HttpServlet {
 				ExtRequestMapping methodExtRequestMapping = method.getDeclaredAnnotation(ExtRequestMapping.class);
 				if (methodExtRequestMapping != null) {
 					String methodUrl = baseUrl + methodExtRequestMapping.value();
-					// springmvc 容器对象 keya:请求地址 ,vlue类
+					// springmvc 容器对象 keya:请求地址 ,vlue类对象
 					urlBeans.put(methodUrl, object);
 					// springmvc 容器对象 key:请求地址 ,value 方法名称
 					urlMethods.put(methodUrl, method.getName());

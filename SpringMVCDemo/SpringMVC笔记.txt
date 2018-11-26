@@ -9,7 +9,9 @@ destory()  tomcat关闭才执行
 
 SpringMVC步骤：
 1.用户请求过来交给前端控制器dispatchServlet
-2.handlerMapping---将url和方法对应上
+2.handlerMapping映射器---将url和方法对应上
+3.请求处理器----执行方法
+4.方法执行完后，有结果return，return的结果请求转发到视图解析器
 
 
 
@@ -22,3 +24,5 @@ SpringMVC步骤：
 ##########一个map的key为url,key为类对象，一个map的key为url,value为方法名
 3.处理请求:重写Get或者post方法
 ####3.1从map集合中获取url对应的类对象，获取url对应的方法名，使用反射机制执行
+####3.2反射执行完后，返回的结果请求转发到视图解析器上去
+
