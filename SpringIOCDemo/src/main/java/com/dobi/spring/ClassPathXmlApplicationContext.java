@@ -9,6 +9,7 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.dobi.annotation.ExtResource;
 import com.dobi.annotation.ExtService;
 import com.dobi.utils.ClassUtil;
 import org.apache.commons.lang.StringUtils;
@@ -47,28 +48,40 @@ public class ClassPathXmlApplicationContext {
 		}
 		// 3.使用beanID查找查找对应bean对象，通过hashmap的key得到对象
 		Object object = initBean.get(beanId);
-		// 4.使用反射读取类的属性,赋值信息
+		// 4.使用反射读取类的属性,赋值信息------依赖注入
 		attriAssign(object);
 		return object;
 	}
 
-	// 使用反射读取类的属性,赋值信息
+	/**
+	 * // 使用反射读取类的属性,赋值信息
+	 * 依赖注入-----反射技术
+	 * @param object
+	 * @throws IllegalArgumentException
+	 * @throws IllegalAccessException
+	 */
+
 	public void attriAssign(Object object) throws IllegalArgumentException, IllegalAccessException {
 		// 1.获取类的属性是否存在 获取bean注解
 		Class<? extends Object> classInfo = object.getClass();
-		Field[] declaredFields = classInfo.getDeclaredFields();
+		Field[] declaredFields = classInfo.getDeclaredFields();  //获取所有属性，包括私有属性
 		for (Field field : declaredFields) {
-			// 属性名称
-			String name = field.getName();
-			// 2.使用属性名称查找bean容器赋值
-			Object bean = initBean.get(name);
-			if (bean != null) {
-				// 私有访问允许访问
-				field.setAccessible(true);
-				// 给属性赋值
-				field.set(object, bean);
-				continue;
+			ExtResource extResource = field.getAnnotation(ExtResource.class);//获取注解
+			if(extResource!=null){
+				// 属性名称
+				String name = field.getName();
+				System.out.println("属性名"+name);
+				// 2.使用属性名称查找bean容器赋值
+				Object bean = initBean.get(name);  //去hashmap容器中拿对象
+				if (bean != null) {
+					// 私有访问允许访问
+					field.setAccessible(true);
+					// 给属性赋值
+					field.set(object, bean);
+					continue;
+				}
 			}
+
 		}
 
 	}
