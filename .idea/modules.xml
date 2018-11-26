@@ -27,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" filepath="$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" group="SpringIOC" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC_test.iml" group="SpringIOC" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" filepath="$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_main.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />

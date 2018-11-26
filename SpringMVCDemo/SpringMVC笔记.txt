@@ -1,0 +1,24 @@
+
+Servlet
+Servlet单例，全局只有1个
+
+Servlet生命周期
+intit()方法  全局只会执行一次
+doGet,doPost
+destory()  tomcat关闭才执行
+
+SpringMVC步骤：
+1.用户请求过来交给前端控制器dispatchServlet
+2.handlerMapping---将url和方法对应上
+
+
+
+手写SpringMVC原理分析
+1.创建一个前端控制器ExtDispatcherServlet拦截所有请求(spring mvc基于servlet实现)
+2.初始化操作，重写servlet init方法
+###2.1将扫包范围所有类，如果有相应的注解，就注入到SpringMVC容器里面，存放到map集合中，key为默认类名首字母小写，value为对象
+###2.2将url映射和方法进行关联
+#####2.2.1判断类上是否有注解，使用java反射机制循环遍历方法，判断方法上是否存在注解，进行封装url和方法，用2个map集合存，
+##########一个map的key为url,key为类对象，一个map的key为url,value为方法名
+3.处理请求:重写Get或者post方法
+####3.1从map集合中获取url对应的类对象，获取url对应的方法名，使用反射机制执行
