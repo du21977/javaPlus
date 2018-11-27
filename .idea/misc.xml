@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/SpringAOPTransactionDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringIOCDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringMVCDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/MyBatisORMDemo/pom.xml" />
       </list>
     </option>
   </component>
