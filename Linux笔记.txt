@@ -35,7 +35,50 @@ rm 删除，有提示
 
 cp 复制
 
+解压命令
+tar -zxvf 安装包名称
+
+vim filename 文本编辑模式
+
 rm -rf /* 千万不要用这个命令，会把所有文件都递归删除，系统会出问题
+
+--------------------------------------------------------------------------
+第二天
+vim编辑器---linux操作文件
+vim 加文件名，进入编辑模式
+怎么退出呢，先ESC键，然后输入:q!，就是不保存强制退出
+如果输入:wq，就是保存并退出
+
+进入编辑模式：输入i,在当前行最后做编辑，输入I，在当前行开头编辑
+:set nu 显示行号
+:行数,就定位到第几行
+
+grep 关键词 文件名 -----在文件中搜索带关键词的内容
+
+rpm -ivh 文件名  安装软件
+rpm -Uvh 文件名  升级软件
+
+启动服务
+service mysqld start
+连接mysql
+mysqladmin -u root password '密码'   //初始化密码
+mysql -u root -p
+
+解压
+tar -zxvf 安装包名称
+
+查看日志
+tail -200f catalina.out
+
+防火墙的开关
+开启： service iptables start
+关闭： service iptables stop
+
+tamcat启动
+进入tomcat目录 /usr/java/apa...
+cd bin
+./startup.sh
+
 
 
 
