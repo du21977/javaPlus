@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/MyBatisORMDemo/MyBatisORMDemo.iml" filepath="$PROJECT_DIR$/MyBatisORMDemo/MyBatisORMDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyCollection/MyCollection.iml" filepath="$PROJECT_DIR$/MyCollection/MyCollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" filepath="$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NginxDemo/NginxDemo.iml" filepath="$PROJECT_DIR$/NginxDemo/NginxDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/RedisDemo/RedisDemo.iml" filepath="$PROJECT_DIR$/RedisDemo/RedisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo.iml" />
