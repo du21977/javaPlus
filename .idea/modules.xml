@@ -24,6 +24,8 @@
       <module fileurl="file://$PROJECT_DIR$/SpringAOPTransactionDemo/SpringAOPTransactionDemo.iml" filepath="$PROJECT_DIR$/SpringAOPTransactionDemo/SpringAOPTransactionDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBootDemo/SpringBootDemo.iml" filepath="$PROJECT_DIR$/SpringBootDemo/SpringBootDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBootSessionDemo/SpringBootSessionDemo.iml" filepath="$PROJECT_DIR$/SpringBootSessionDemo/SpringBootSessionDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudDemo/SpringCloudDemo.iml" filepath="$PROJECT_DIR$/SpringCloudDemo/SpringCloudDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudMemberService/SpringCloudMemberService.iml" filepath="$PROJECT_DIR$/SpringCloudMemberService/SpringCloudMemberService.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringDemo/SpringDemo.iml" filepath="$PROJECT_DIR$/SpringDemo/SpringDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" filepath="$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" />
