@@ -28,13 +28,16 @@ SpringCloud-----微服务解决方案
 接口地址怎么管理，容错机制，负载均衡，网关接口，路由策略，高并发情况下接口怎么限流，断路
 
 SpringCloud解决什么问题？
-配置管理，注册中心eureka(Dubbo的注册中心是zookeeper,作用管理服务),服务发现，服务注册，客户端调用(rest,feign)
+配置管理，注册中心eureka(Dubbo的注册中心是zookeeper,作用管理服务),服务发现，服务注册，客户端调用服务(rest,feign，这两个底层通过httpclent调用地址访问)
 断路器(接口调用失败怎么解决)，路由策略，负载均衡(ribbon)，全局锁，分布式会话，接口网关(zuul)，服务管理系统
 rpc远程调用
 SpringBoot与SpringCloud关系
 SpringBoot简化xml配置，快速整合框架
 SpringCloud是一套微服务解决方案--RPC远程调用
 SpringCloud依赖SpringBoot
+
+-----------------------------------------------------------
+SpringCloud调用服务原理
 
 
 

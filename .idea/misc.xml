@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/MySQLDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCloudDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCloudMemberService/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringCloudOrderService/pom.xml" />
       </list>
     </option>
   </component>
