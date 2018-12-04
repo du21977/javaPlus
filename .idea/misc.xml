@@ -28,6 +28,8 @@
         <option value="$PROJECT_DIR$/SpringCloudDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCloudMemberService/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCloudOrderService/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringCloudZuul/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringCloudOrderFeignService/pom.xml" />
       </list>
     </option>
   </component>

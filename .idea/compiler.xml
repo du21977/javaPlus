@@ -19,7 +19,9 @@
         <module name="SpringBootSessionDemo" />
         <module name="SpringCloudDemo" />
         <module name="SpringCloudMemberService" />
+        <module name="SpringCloudOrderFeignService" />
         <module name="SpringCloudOrderService" />
+        <module name="SpringCloudZuul" />
         <module name="SpringDemo" />
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
@@ -52,7 +54,9 @@
       <module name="SpringBootSessionDemo" target="1.6" />
       <module name="SpringCloudDemo" target="1.8" />
       <module name="SpringCloudMemberService" target="1.8" />
+      <module name="SpringCloudOrderFeignService" target="1.8" />
       <module name="SpringCloudOrderService" target="1.8" />
+      <module name="SpringCloudZuul" target="1.8" />
       <module name="SpringDemo" target="1.5" />
       <module name="SpringIOC_main" target="1.8" />
       <module name="SpringIOC_test" target="1.8" />

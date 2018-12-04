@@ -8,7 +8,9 @@
     <file url="file://$PROJECT_DIR$/SpringBootSessionDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudMemberService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringCloudOrderFeignService" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudOrderService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringCloudZuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringMVCDemo" charset="UTF-8" />
   </component>
 </project>
