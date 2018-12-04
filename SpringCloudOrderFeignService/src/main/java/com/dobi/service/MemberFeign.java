@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 调用会员服务
+ *
+ * fallback=MemberFallBack.class 服务降级来解决雪崩效应
  */
 
 @FeignClient(value = "service-member",fallback=MemberFallBack.class)

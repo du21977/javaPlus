@@ -7,7 +7,9 @@ import com.dobi.service.MemberFeign;
 import org.springframework.stereotype.Component;
 
 
-
+/**
+ * 雪崩效应，服务降级，会调用本方法
+ */
 @Component
 public class MemberFallBack implements MemberFeign {
 
