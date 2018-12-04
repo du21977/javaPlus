@@ -10,13 +10,24 @@
 高并发，缓存---包括
 redis,mongdb(主要存json),ActiveMQ,kafuka,nginx,zp
 
+oscache 与 ehcache ---都是jvm内置缓存，实际上就是在定义一个全局static hashmap集合
+mybatis二级缓存机制 oscache---主要针对数据库访问层
+hibernate二级缓存机制  ehcache--主要针对jsp页面缓存
+
+jvm缓存缺点：内存溢出，没有持久化,分布式不共享
+nosql缓存：可持久化，分布式共享
+
+redis--必须学会 5种基本数据类型、持久化、高可用(主从复制，哨兵机制)
 
 NOSQL的几种数据库
 redis,mongdb,memcached,Hbase
 
+nosql特征：存储在内存中，key,value存放，分布式情况多服务器共享数据，效率高
+
 redis与memcached区别
 redis可以做持久化(保存到硬盘)，比memcached支持的数据类型更加丰富
 memcached不能做持久化
+
 
 redis的应用场景
 session共享
@@ -66,10 +77,29 @@ jedis是操作redis的一个插件
 
 蚂蚁课糖第一期第9节了--未看
 
+linux启动redis
+关闭： service iptables stop
+进入安装目录，进入src目录，执行 ./redis-server
+在window redis客户端可以连接上
+因为服务是前台，得让redis服务转为后台，所以得设置下
+vim redis.conf 修改密码为123
+后台启动,在src目录
+./redis-server /usr/java/redis/redis-3.0.0/redis.conf
+linux中启动redis
+./redis-cli -h 127.0.0.1 -p 6379 -a "123"
+再输入ping
 
 
 
-
+-------------------------面试题----------------------------------
+1.什么是redis
+redis是nosql缓存数据库
+2.为什么要用redis
+可以减轻数据库访问压力，查询内存比查询数据库效率高
+3.redis应用场景
+token生成，session共享，验证码，分布式锁(能说出这个很牛逼)
+4.基本数据类型
+String ,list ,set ,hash,sort set
 
 
 
