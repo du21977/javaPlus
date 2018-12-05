@@ -15,8 +15,8 @@ public class JedisDemo {
 	}
 
 	static public void setString() {
-		Jedis jedis = new Jedis("127.0.0.1", 6379);
-		jedis.auth("root");
+		Jedis jedis = new Jedis("192.168.248.133", 6379);
+		jedis.auth("123");
 		jedis.ping();
 		jedis.setex("10", 10, "张三");
 		//设置过期时间
