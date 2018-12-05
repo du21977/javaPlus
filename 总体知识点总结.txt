@@ -1,0 +1,28 @@
+
+1.多线程
+线程安全、通讯、java并发包、线程池、线程池配置多少合适、信号量、锁机制
+2.javase核心知识
+反射机制、自定义注解
+3.网络通讯核心
+socket tcp与udp、 nio/aio/bio/ 、 粘包、netty通讯
+4.jvm核心
+垃圾回收算法、新生代和老生代、并行回收、串行回收、实战调优
+5.javaweb核心
+dns解析过程，防止表单重复提交(token+验证码)、企业黑名单、白名单(用refer)、重定向与转发原理
+跨域解决方案(jsonp、ngnix搭建网关、springcloud zuul网关)、xss攻击、http协议
+6.linux基本命令
+7.mysql性能优化
+主从复制、定位慢查询、使用索引注意事项、数据库mycat怎么做集群、怎么做读写分离及原理
+8.spring事务、传播行为
+9.springioc、生命周期
+10.SpringBoot
+11.ngnix
+负载均衡算法(ip绑定、轮询、权重)、高并发集群、怎么配置(在ngnix.conf中配置，权重weight)
+12.redis
+几个命令、主从复制、哨兵机制、持久化
+13.消息中间件(作用：异步、防止阻塞)
+MQ怎么做幂等
+14.分布式Job  XXLJob---解决幂等性
+15.dubbo、dubbox 、zookeeper
+16、集合框架原理
+17、
