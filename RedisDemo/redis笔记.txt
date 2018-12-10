@@ -32,6 +32,7 @@ memcached不能做持久化
 redis的应用场景
 session共享
 验证码存在redis---有过期时间
+token
 
 redis的使用
 双击redis-cli.exe
