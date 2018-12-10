@@ -21,6 +21,7 @@ public class Test002 implements Watcher {
 	// 会话超时时间
 	private static final int SESSIONTIME = 2000;
 
+	//zk创建连接
 	public void createConnection(String addres, int sessionTimeOut) {
 		try {
 			zk = new ZooKeeper(CONNECT_ADDRES, sessionTimeOut, this);
@@ -32,9 +33,18 @@ public class Test002 implements Watcher {
 
 	}
 
+	/**
+	 * 创建节点----永久型
+	 * @param path
+	 * @param data
+	 * @return
+	 * @throws KeeperException
+	 * @throws InterruptedException
+	 */
 	public boolean createPath(String path, String data) throws KeeperException, InterruptedException {
 		try {
 			exists(path, true);
+			//创建持久化节点
 			this.zk.create(path, data.getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 			System.out.println("节点创建成功, Path:" + path + ",data:" + data);
 		} catch (Exception e) {
@@ -45,6 +55,13 @@ public class Test002 implements Watcher {
 
 	}
 
+
+	/**
+	 * 节点是否需要被监听
+	 * @param path
+	 * @param needWatch
+	 * @return
+	 */
 	public Stat exists(String path, boolean needWatch) {
 		try {
 			return this.zk.exists(path, needWatch);
@@ -53,11 +70,25 @@ public class Test002 implements Watcher {
 			return null;
 		}
 	}
+
+	/**
+	 * 更新节点
+	 * @param path
+	 * @param data
+	 * @return
+	 * @throws KeeperException
+	 * @throws InterruptedException
+	 */
 	public boolean updateNode(String path, String data) throws KeeperException, InterruptedException {
 		exists(path, true);
 		this.zk.setData(path, data.getBytes(), -1);
 		return false;
 	}
+
+	/**
+	 * 会走事件通知，implements Watcher
+	 * @param event
+	 */
 	public void process(WatchedEvent event) {
 		// 获取事件状态
 		KeeperState keeperState = event.getState();
@@ -80,11 +111,22 @@ public class Test002 implements Watcher {
 		}
 	}
 
+	public void close(){
+		if(zk!=null){
+			try {
+				zk.close();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 	public static void main(String[] args) throws KeeperException, InterruptedException {
 		Test002 test002 = new Test002();
 		test002.createConnection(CONNECT_ADDRES, SESSIONTIME);
-		//test002.createPath("/itmayiedu_zhangsan", "zhangsan");
+//		test002.createPath("/itmayiedu_zhangsan", "zhangsan");
 		test002.updateNode("/itmayiedu_zhangsan", "123456");
+		test002.close();
 	}
 
 }

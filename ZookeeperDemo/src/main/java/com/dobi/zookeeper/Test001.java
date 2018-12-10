@@ -47,9 +47,15 @@ public class Test001 {
 		//主线程
 		//创建持久节点，节点开放权限
 		//Ids.OPEN_ACL_UNSAFE权限
-		String result = zk.create("/itmayeidu_Lasting", "Lasting".getBytes(), Ids.OPEN_ACL_UNSAFE,
+		String result = zk.create("/itmayeidu_1", "Lasting".getBytes(), Ids.OPEN_ACL_UNSAFE,
 				CreateMode.PERSISTENT);
-		System.out.println("新增节点--："+result);
+		System.out.println("新增永久节点--："+result);
+
+		//创建临时节点
+		String result1 = zk.create("/duterminal", "dudud".getBytes(), Ids.OPEN_ACL_UNSAFE,
+				CreateMode.EPHEMERAL);
+		System.out.println("新增临时节点--："+result1);
+		Thread.sleep(20000);//zk.close()后，超过时间，临时节点就会自动删除
 		zk.close();
 	}
 
