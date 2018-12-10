@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 import org.I0Itec.zkclient.IZkDataListener;
 
 /**
- * 自己实现zookeeper锁
+ * 自己实现zookeeper分布式锁
  */
 public class ZookeeperDistrbuteLock extends ZookeeperAbstractLock {
 	private CountDownLatch countDownLatch = null;

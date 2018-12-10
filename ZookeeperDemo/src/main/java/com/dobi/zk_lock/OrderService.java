@@ -7,7 +7,7 @@ public class OrderService implements Runnable {
 	private OrderNumGenerator orderNumGenerator = new OrderNumGenerator();
 	// 使用lock锁--lock锁是手动挡，必须自己释放锁
 	// private java.util.concurrent.locks.Lock lock = new ReentrantLock();
-	//调用我们自己写的zookeeper锁，每个线程，都new一个锁，相当于每个服务器都去创建一个zookeeper连接，用完自己关闭连接，不会对别的服务器产生影响
+	//调用我们自己写的zookeeper分布式锁，每个线程，都new一个锁，相当于每个服务器都去创建一个zookeeper连接，用完自己关闭连接，不会对别的服务器产生影响
 	private Lock lock = new ZookeeperDistrbuteLock();
 
 	public void run() {

@@ -47,7 +47,7 @@ public class Test001 {
 		//主线程
 		//创建持久节点，节点开放权限
 		//Ids.OPEN_ACL_UNSAFE权限
-		String result = zk.create("/itmayeidu_1", "Lasting".getBytes(), Ids.OPEN_ACL_UNSAFE,
+		String result = zk.create("/member", "temp".getBytes(), Ids.OPEN_ACL_UNSAFE,
 				CreateMode.PERSISTENT);
 		System.out.println("新增永久节点--："+result);
 
