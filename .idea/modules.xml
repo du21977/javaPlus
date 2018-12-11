@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesignPattern_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DesignPattern_main.iml" group="DesignPattern" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesignPattern_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DesignPattern_test.iml" group="DesignPattern" />
       <module fileurl="file://$PROJECT_DIR$/DubboDemo/DubboDemo.iml" filepath="$PROJECT_DIR$/DubboDemo/DubboDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DubboMemberInterface/DubboMemberInterface.iml" filepath="$PROJECT_DIR$/DubboMemberInterface/DubboMemberInterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DubboMemberProvider/DubboMemberProvider.iml" filepath="$PROJECT_DIR$/DubboMemberProvider/DubboMemberProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DubboOrderConsumer/DubboOrderConsumer.iml" filepath="$PROJECT_DIR$/DubboOrderConsumer/DubboOrderConsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />

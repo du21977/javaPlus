@@ -31,6 +31,9 @@
         <option value="$PROJECT_DIR$/SpringCloudZuul/pom.xml" />
         <option value="$PROJECT_DIR$/SpringCloudOrderFeignService/pom.xml" />
         <option value="$PROJECT_DIR$/DubboDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/DubboMemberInterface/pom.xml" />
+        <option value="$PROJECT_DIR$/DubboMemberProvider/pom.xml" />
+        <option value="$PROJECT_DIR$/DubboOrderConsumer/pom.xml" />
       </list>
     </option>
   </component>
