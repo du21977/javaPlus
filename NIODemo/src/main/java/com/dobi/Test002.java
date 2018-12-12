@@ -6,6 +6,7 @@ import java.nio.ByteBuffer;
 public class Test002 {
 
 	public static void main(String[] args) {
+		//申请空间
 		ByteBuffer byteBuffer = ByteBuffer.allocate(10);
 		String str = "abcd";
 		byteBuffer.put(str.getBytes());

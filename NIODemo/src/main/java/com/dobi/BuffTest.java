@@ -44,7 +44,7 @@ public class BuffTest {
 		    System.out.println(byteBuffer.limit());
 		    System.out.println(byteBuffer.capacity());
 		    System.out.println("----------读取值...----------");
-		    //开启读取模式
+		    //开启读取模式，将position=0,从0开始读
 		    byteBuffer.flip();
 		    System.out.println("position:"+byteBuffer.position());
 		    System.out.println(byteBuffer.limit());
@@ -62,8 +62,8 @@ public class BuffTest {
 		    byteBuffer.get(bytes2);
 		    System.out.println(new String(bytes2,0,bytes2.length));
 		    //清空缓冲数据被遗忘值...
-		    System.out.println("----------清空缓冲区--------------");
-		    byteBuffer.clear();
+		    System.out.println("----------清空缓冲区---值不清空，下标清空-----------");
+		    byteBuffer.clear();//清空缓冲区
 		    System.out.println("position:"+byteBuffer.position());
 		    System.out.println(byteBuffer.limit());
 		    System.out.println(byteBuffer.capacity());
