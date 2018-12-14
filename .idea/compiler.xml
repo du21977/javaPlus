@@ -17,6 +17,7 @@
         <module name="MyCollection" />
         <module name="MySQLDemo" />
         <module name="NettyDemo" />
+        <module name="NettyDemo1" />
         <module name="NginxDemo" />
         <module name="NIODemo" />
         <module name="RedisDemo" />
@@ -52,6 +53,7 @@
       <module name="MyCollection" target="1.5" />
       <module name="MySQLDemo" target="1.5" />
       <module name="NettyDemo" target="1.6" />
+      <module name="NettyDemo1" target="1.5" />
       <module name="NginxDemo" target="1.5" />
       <module name="NignxDemo" target="1.5" />
       <module name="NIODemo" target="1.7" />

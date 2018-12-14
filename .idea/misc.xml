@@ -36,6 +36,7 @@
         <option value="$PROJECT_DIR$/DubboOrderConsumer/pom.xml" />
         <option value="$PROJECT_DIR$/NIODemo/pom.xml" />
         <option value="$PROJECT_DIR$/NettyDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/NettyDemo1/pom.xml" />
       </list>
     </option>
   </component>
