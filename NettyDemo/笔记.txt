@@ -1,0 +1,13 @@
+
+为什么有netty？
+解决NIO非阻塞代码Bug, 对NIO进行封装
+
+Netty底层就是NIO，Netty和NIO都是通讯框架
+netty特征是异步通信框架，异步非阻塞，高可用(容错机制、重试机制)
+Netty的应用：
+分布式开源框架中，dubbo 和zookeeper，robbitMQ底层都是用的netty框架
+SpringCloud底层用的http
+
+
+
+

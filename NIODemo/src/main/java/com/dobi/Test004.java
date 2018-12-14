@@ -8,6 +8,11 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+/**
+ * 分散读取和聚集写入
+ * 分散读取：将一个通道的数据分散到多个缓冲区
+ * 聚集写入：将多个缓冲区的数据聚集到通道中
+ */
 public class Test004 {
 	public static void main(String[] args) throws IOException {
 		//随机访问

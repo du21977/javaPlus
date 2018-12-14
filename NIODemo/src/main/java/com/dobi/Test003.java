@@ -13,6 +13,9 @@ import java.nio.file.StandardOpenOption;
 
 import org.junit.Test;
 
+/**
+ * 直接缓冲区效率比非直接缓冲区高很多
+ */
 public class Test003 {
 
 	//直接缓冲区
@@ -20,8 +23,8 @@ public class Test003 {
 	public void test002() throws IOException {
 		long statTime=System.currentTimeMillis();
 		//创建管道
-		FileChannel   inChannel=	FileChannel.open(Paths.get("f://1.mp4"), StandardOpenOption.READ);
-		FileChannel   outChannel=	FileChannel.open(Paths.get("f://2.mp4"), StandardOpenOption.READ,StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+		FileChannel   inChannel=	FileChannel.open(Paths.get("1.png"), StandardOpenOption.READ);
+		FileChannel   outChannel=	FileChannel.open(Paths.get("2.png"), StandardOpenOption.READ,StandardOpenOption.WRITE, StandardOpenOption.CREATE);
 	    //定义映射文件
 		MappedByteBuffer inMappedByte = inChannel.map(MapMode.READ_ONLY,0, inChannel.size());
 		MappedByteBuffer outMappedByte = outChannel.map(MapMode.READ_WRITE,0, inChannel.size());
@@ -39,10 +42,14 @@ public class Test003 {
 	@Test
 	public void test001() throws IOException {
 		long statTime=System.currentTimeMillis();
+//		// 读入流
+//		FileInputStream fst = new FileInputStream("f://1.mp4");
+//		// 写入流
+//		FileOutputStream fos = new FileOutputStream("f://2.mp4");
 		// 读入流
-		FileInputStream fst = new FileInputStream("f://1.mp4");
+		FileInputStream fst = new FileInputStream("1.png");
 		// 写入流
-		FileOutputStream fos = new FileOutputStream("f://2.mp4");
+		FileOutputStream fos = new FileOutputStream("2.png");
 		// 创建通道
 		FileChannel inChannel = fst.getChannel();
 		FileChannel outChannel = fos.getChannel();
