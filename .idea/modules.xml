@@ -26,6 +26,7 @@
       <module fileurl="file://$PROJECT_DIR$/NettyDemo1/NettyDemo1.iml" filepath="$PROJECT_DIR$/NettyDemo1/NettyDemo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/NginxDemo/NginxDemo.iml" filepath="$PROJECT_DIR$/NginxDemo/NginxDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/RedisDemo/RedisDemo.iml" filepath="$PROJECT_DIR$/RedisDemo/RedisDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SecretDemo/SecretDemo.iml" filepath="$PROJECT_DIR$/SecretDemo/SecretDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo_main.iml" group="SocketDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SocketDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SocketDemo_test.iml" group="SocketDemo" />

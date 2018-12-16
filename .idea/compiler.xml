@@ -22,6 +22,7 @@
         <module name="NginxDemo" />
         <module name="NIODemo" />
         <module name="RedisDemo" />
+        <module name="SecretDemo" />
         <module name="SpringAOPTransactionDemo" />
         <module name="SpringBootDemo" />
         <module name="SpringBootSessionDemo" />
@@ -61,6 +62,7 @@
       <module name="NignxDemo" target="1.5" />
       <module name="NIODemo" target="1.7" />
       <module name="RedisDemo" target="1.6" />
+      <module name="SecretDemo" target="1.8" />
       <module name="SocketDemo_main" target="1.8" />
       <module name="SocketDemo_test" target="1.8" />
       <module name="SpringAOPDemo" target="1.5" />
