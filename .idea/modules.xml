@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/DubboMemberInterface/DubboMemberInterface.iml" filepath="$PROJECT_DIR$/DubboMemberInterface/DubboMemberInterface.iml" />
       <module fileurl="file://$PROJECT_DIR$/DubboMemberProvider/DubboMemberProvider.iml" filepath="$PROJECT_DIR$/DubboMemberProvider/DubboMemberProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/DubboOrderConsumer/DubboOrderConsumer.iml" filepath="$PROJECT_DIR$/DubboOrderConsumer/DubboOrderConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JVMDemo/JVMDemo.iml" filepath="$PROJECT_DIR$/JVMDemo/JVMDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
@@ -45,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_main.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />
+      <module fileurl="file://$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" filepath="$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZookeeperDemo/ZookeeperDemo.iml" filepath="$PROJECT_DIR$/ZookeeperDemo/ZookeeperDemo.iml" />
     </modules>
   </component>

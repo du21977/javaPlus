@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ActiveMQConsumerDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ActiveMQProducerDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JVMDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RedisDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBootDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBootSessionDemo" charset="UTF-8" />
@@ -12,5 +13,6 @@
     <file url="file://$PROJECT_DIR$/SpringCloudOrderService" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringCloudZuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringMVCDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/XXLJobDemo" charset="UTF-8" />
   </component>
 </project>

@@ -13,6 +13,7 @@
         <module name="DubboMemberInterface" />
         <module name="DubboMemberProvider" />
         <module name="DubboOrderConsumer" />
+        <module name="JVMDemo" />
         <module name="MyBatisORMDemo" />
         <module name="MyCollection" />
         <module name="MySQLDemo" />
@@ -32,6 +33,7 @@
         <module name="SpringDemo" />
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
+        <module name="XXLJobDemo" />
         <module name="ZookeeperDemo" />
       </profile>
     </annotationProcessing>
@@ -49,6 +51,7 @@
       <module name="DubboOrderConsumer" target="1.5" />
       <module name="JavaPlus_main" target="1.8" />
       <module name="JavaPlus_test" target="1.8" />
+      <module name="JVMDemo" target="1.6" />
       <module name="MyBatisORMDemo" target="1.8" />
       <module name="MyCollection" target="1.5" />
       <module name="MySQLDemo" target="1.5" />
@@ -78,6 +81,7 @@
       <module name="SpringMVCDemo" target="1.8" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />
+      <module name="XXLJobDemo" target="1.6" />
       <module name="ZookeeperDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
