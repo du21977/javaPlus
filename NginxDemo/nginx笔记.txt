@@ -8,6 +8,12 @@
 
 很多公司在nginx上做集群和负载均衡
 
+nginx性能非常好，占内存小，轻量级服务器，能5万并发量
+
+类似nginx反向代理--lvs,F5,
+
+默认端口80,和http一样
+
 
 负载均衡是解决高并发最基本的手段
 负载均衡：减轻单台服务器的压力
@@ -15,13 +21,35 @@
 在高并发请求时，防止单台服务器承受不了，我们一般采用负载均衡
 我们搞多个服务器，就是多个tomcat,不同的请求根据情况访问不同的服务器
 
-集群的情况下，有很多问题产生，session共享，分布式情况下定时job解决幂等性问题
+集群的情况下，有很多问题产生，session共享，分布式情况下定时job解决幂等性，分布式锁问题
+
+服务器集群怎么实现？
+使用nginx实现负载均衡
+
+集群的目的：减轻服务器压力，将一个项目部署到多台服务器上
+分布式：将一个项目分成n多个子项目，目的解耦
+
+host文件修改
+C\Windows\Systen32\drivers\etc\hosts
+做DNS解析
+
+ngnix.conf 做nginx配置
 
 tomcat服务器挂了怎么办，nginx通过心跳检测，请求转到其他tomcat服务器上去，在nginx上配置超时时间，请求超时后，会自动换到其他tomcat服务器上
 
 nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一般不止一台，一般有一主一备或多备，keeoalived转到备nginx
 ,每台nginx都有keepalived,这些keepalived共享一个ip---LVS，有一台nginx挂了后，keepalived会自动重启nginx
 
+服务器宕机解决方案：
+1.使用keepalive，重启服务器脚本
+2.nginx配置，集群宕机，自动轮询到下一台服务器
+ location / {
+		    proxy_pass  http://backserver;
+			index  index.html index.htm;
+			proxy_connect_timeout 1;   //有服务器1s内没响应，就自动轮询到下一台服务器
+            proxy_send_timeout 1;
+            proxy_read_timeout 1;
+        }
 
 高并发解决方案：
 负载均衡、集群、CDN、动静分离、数据读写分离、使用缓存技术（redis）,分表分库，java代码；
@@ -32,7 +60,43 @@ nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一
 负载均衡策略：
 轮询：每个请求按照时间顺序逐一分配到不同的服务器
 按权重分配：
-ip绑定：用的不多,固定的ip绑定固定的服务器
+ip绑定：用的不多,固定的ip绑定固定的服务器----这个可以解决session共享问题
+轮询配置
+upstream backserver {
+     server 127.0.0.1:8080;
+     server 127.0.0.1:8081;
+    }
+权重配置
+upstream backserver {
+     server 127.0.0.1:8080 weight=2;
+     server 127.0.0.1:8081 weight =1;
+    }
+ip绑定
+upstream backserver { 
+ip_hash; 
+server 192.168.0.14:88; 
+server 192.168.0.15:80; 
+} 
+
+集群配置
+#负载均衡
+	upstream backserver {
+     server 127.0.0.1:8080;
+     server 127.0.0.1:8081;
+    }
+    server {
+        listen       80;
+        server_name  www.du.com;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+		#反向代理
+        location / {
+            proxy_pass  backserver;
+			index  index.html index.htm;
+        }
+
 
 
 负载均衡原理：一致性hash算法，一种分布式算法
@@ -41,9 +105,58 @@ ip绑定：用的不多,固定的ip绑定固定的服务器
 集群是多台服务器搞到一起，把一个功能分摊到不同的节点进行执行
 
 
+
+
 多个tomcat访问同一个缓存redis，redis有ip有端口呀
 
 负载均衡这么多服务器怎样做session共享呢？
 1.重写session,第一次创建session，往redis里面缓存一份，而且两个的过期时间设置一致
 2.第二次，先从session里面找，如果没有，再去redis里面去找
 
+--------------------------------跨域-------------------------------------------------
+什么是跨域问题？
+A页面想获取B页面的资源，而A/B页面的域名端口都不同，浏览器为了安全，不允许进行跨域请求资源
+浏览器访问地址与ajax实际访问地址不同
+B项目访问A项目，产生跨域问题---两个项目的域名不同
+解决办法：
+1.jsonp  只支持get，不支持post
+2.httpclient内部转发
+3.http响应头允许跨域设置
+4.nginx搭建企业api接口网关
+5.zuul接口网关
+
+企业api接口网关的原理：通过域名相同，项目不同，进行拦截，跳转到真实服务器中
+跨域--接口网关配置
+server {
+        listen       80;
+        server_name  www.itmayiedu.com;
+        location /A {
+		    proxy_pass  http://a.a.com:81/A;
+			index  index.html index.htm;
+        }
+		location /B {
+		    proxy_pass  http://b.b.com:81/B;
+			index  index.html index.htm;
+        }
+    }
+
+---------------------Linux下-------------------------------
+启动出错执行下面命令
+ln -s /usr/local/lib/libpcre.so.1 /lib
+
+重启：
+$ /usr/local/nginx/sbin/nginx 启动命令
+重启：
+$ /usr/local/nginx/sbin/nginx –s reload
+停止：
+$ /usr/local/nginx/sbin/nginx –s stop
+测试配置文件是否正常：
+$ /usr/local/nginx/sbin/nginx –t
+强制关闭：
+$ pkill nginx
+
+
+-----------------------------keepalived-------------------------------------
+一般大公司nginx一主一备
+nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一般不止一台，一般有一主一备或多备，keeoalived转到备nginx
+,每台nginx都有keepalived,这些keepalived共享一个ip---LVS，有一台nginx挂了后，keepalived会自动重启nginx
