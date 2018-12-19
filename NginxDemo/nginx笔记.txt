@@ -157,6 +157,8 @@ $ pkill nginx
 
 
 -----------------------------keepalived-------------------------------------
+
+keepalived一般用来实现高可用，实现故障转移，宕机重启
 一般大公司nginx一主一备
 nginx服务器挂了，怎么办，通过keepalived故障转移，所以nginx一般不止一台，一般有一主一备或多备，keeoalived转到备nginx
 ,每台nginx都有keepalived,这些keepalived共享一个ip---LVS，有一台nginx挂了后，keepalived会自动重启nginx

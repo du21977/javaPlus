@@ -41,6 +41,13 @@ ActiviMQ底层原理：
 整体代码一定try。。catch
 每天晚上定时job解决消息异常
 
+一句话使用全局消息ID来判断
+String messageId = textMessage.getJMSMessageID();
+			//网络延时的情况下，第二次消费过来，使用全局ID该消息被签收
+			if(messageId == "1"){//查数据库该消息id的标识，
+				textMessage.acknowledge(); //手动签收，避免再次重试
+			}
+
 
 生产者怎么知道消费者消费成功
 消费的必须返回一个标识success，就标识成功了，如果fail，就重试

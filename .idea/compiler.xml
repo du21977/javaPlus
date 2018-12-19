@@ -55,7 +55,7 @@
       <module name="JVMDemo" target="1.6" />
       <module name="MyBatisORMDemo" target="1.8" />
       <module name="MyCollection" target="1.5" />
-      <module name="MySQLDemo" target="1.5" />
+      <module name="MySQLDemo" target="1.6" />
       <module name="NettyDemo" target="1.6" />
       <module name="NettyDemo1" target="1.5" />
       <module name="NginxDemo" target="1.5" />
