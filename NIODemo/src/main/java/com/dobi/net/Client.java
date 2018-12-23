@@ -63,7 +63,7 @@ class NioServer {
 					SocketChannel socketChannel = sChannel.accept();
 					// 11. 设置为阻塞费事
 					socketChannel.configureBlocking(false);// 异步非阻塞IO
-					// 12.将该通道注册到服务器上
+					// 12.将该通道注册到选择器上
 					socketChannel.register(selector, SelectionKey.OP_READ);
 				}else if(sk.isReadable()){
 					//13.获取当前选择“就绪状态”的通道

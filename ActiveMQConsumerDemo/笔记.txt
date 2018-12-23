@@ -22,6 +22,7 @@ java的消息服务，就是客户端与服务器可以异步消息传输
 几种常用的MQ
 1.ActiviMQ
 2.RabbitMQ
+4.rocketMQ
 3.kafka
 
 
