@@ -5,18 +5,39 @@
 多线程共享全局变量，做写操作时，会有线程安全问题
 2.lock与synchronized区别
 自动挡和手动挡
+synchronized(关键字)什么时候释放锁--1.代码块执行完----2,代码中出现异常
+lock(接口)什么时候释放锁------手动主动释放锁  -----性能比synchronized性能稍微好
+ReentrantLock--可重入锁---可以解决死锁问题----可设置超时自动释放锁
 3.线程池
 4.线程间通讯
+    wait  / notify / notifyAll
 5.ThreadLocal
 每个线程都有自己的局部变量，而不让线程出现线程安全问题
 6.volatile
 线程可见和禁止重排序
+6.1. volatile和synchronized的区别
+synchronized：原子性、互斥性、可见性
+volatile ：可见性、禁止重排序----复合操作不能保证原子性，就是多个线程可同时操作
+6.2. JMM -JAVA Memory Model java内存模型
+    并发编程中如何处理可见性、原子性、有序性的问题
+    java内存模型:共享变量在主内存中，各个线程共享变量时，会从主内存中复制一份到线程自己的工作内存中，
+    线程修改本地内存变量后，什么时候同步到主内存是不知道的，其他线程什么时候从主内存同步修改后的变量值也是不知道的，
+    这就导致了线程同步问题了，synchronized就来了，线程A释放锁后会将变量同步到主内存，线程B获取锁后会同步主内存的变量
+    还有volatile,加了volatile后，主内存和工作内存也会立马同步(会发一些命令，让其同步)
 7.java并发包
 Lock、Exectors、ReentrantLock、Condition、ConcurrentHashMap、BlockQueue、AtomicInteager
 8.多线程实际使用场景
 主线程和gc线程，多线程下载图片
 9.锁
 分布式锁zookeeper
+10如何控制线程执行的顺序
+方法一：
+用join方法来保证多线程的执行顺序
+join:让主线程等待子线程执行完后才继续执行，就是让当前线程(主线程)等待
+方法二：
+ExecutorService exector = Excutors.newSingleThreadExector();
+exector.submit(thread);
+单线程执行，会将线程放入一个队列，FIFO先进先出
 
 
 ----------------------------消息中间件MQ相关------------------------------------
