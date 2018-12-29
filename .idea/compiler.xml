@@ -34,6 +34,7 @@
         <module name="SpringDemo" />
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
+        <module name="TestDemo" />
         <module name="XXLJobDemo" />
         <module name="ZookeeperDemo" />
       </profile>
@@ -81,6 +82,7 @@
       <module name="SpringIOC_test" target="1.8" />
       <module name="SpringIOCDemo" target="1.8" />
       <module name="SpringMVCDemo" target="1.8" />
+      <module name="TestDemo" target="1.7" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />
       <module name="XXLJobDemo" target="1.6" />

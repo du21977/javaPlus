@@ -1,0 +1,8 @@
+
+
+
+Linux查看性能
+命令top
+看CPU
+看MEM内存
+

@@ -9,3 +9,15 @@
 spring-session解决这个问题，SpringBoot用起来非常简单
 
 见SpringBootSessionDemo
+
+
+
+还有几种实现方式：
+方式1：
+利用nginx负载均衡的ip_hash绑定来访问，固定的ip访问固定的机器
+缺点：一旦有一台机器挂了，那么这台机器的session会全部丢失
+方式二：
+为了解决方式1的缺陷，将集群的多个tomcat服务器中的session复制通过广播给其他服务器(通过tomcat配置实现)，
+这样就达成共享了，但是这样做，会很浪费资源
+方式三：将用户信息都放在cookie中，这种方式不安全
+方式四：采用redis来解决---完美
