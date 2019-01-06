@@ -39,12 +39,210 @@ Innodb 支持表锁和行锁，支持事务，
 隔离性级别：
 未提交读：脏读---事务A读取事务B更新的数据，然后B回滚操作，那么A读取的数据就是脏数据
 已提交读：不可重复读-------事务A多次读取同一数据，事务B在事务A多次读取的过程中，对数据做了
-                            更新并提交，导致事务A多次读取同一数据时，结果不一致
-可重复读：默认的隔离级别
-可串行化：
+                            更新并提交，导致事务A多次读取同一数据时，结果不一致，只要更新提交，其他
+                            的再查询就是提交后的值
+可重复读：默认的隔离级别,事务A多次读取同一数据，事务B在事务A多次读取的过程中，对数据做了
+                                         更新并提交，导致事务A多次读取同一数据时，结果一致，只要更新提交，其他
+                                         的再查询还是原来的数据
+可串行化：可解决可重复读出现的幻读问题------会锁表
+从上到下，级别越来越高，数据一致性越来越好
 
 不可重复读侧重于修改-----需要行锁解决
 幻读侧重于增加和删除------需要锁表
+
+rollback回滚
+
+
+----------数据库设计原则----------
+逻辑设计：范式化设计与反范式化设计
+范式设计
+1.原子性，每个字段不能再分割，如不能出现name-age字段
+2.有一个主键
+3.不能有强关联性
+在员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息
+而是搞一个外键
+缺点：需要关联join查询
+
+反范式化设计：有冗余数据，但是关联查询少，查询快
+
+物理设计：
+命名规范：custAddress或cust_address,不能custaddress
+存储引擎选择,MyISAM,InnoDB
+数据类型选择:
+
+datetime 和 timestamp的区别
+datetime占8个字节，MYSQL 5.6以后占5个字节
+ timestamp占4个字节
+ datetime跟时区无关
+ timestamp与时区有关
+
+ char,varchar
+-------------------------------------------------------------------------------------
+
+ ----------------慢查询--------------------------
+
+开启慢查询日志功能
+看日志文件，看看是哪个SQL语句是执行时间久
+通过工具从日志文件中找出哪个语句执行久（会按执行时间长短排序的，从而找出前面几名时间长的）
+工具1：mysqldumpslow-----这个工具必须登录到mysql服务器才能使用
+mysqldumpslow.pl -s t -t 10 D:\DESKTOP-2EKGEE5-slow.log
+工具2：pt_query_digest-----在远端也能使用
+pt-query-digest  --explain h=127.0.0.1, u=root,p=password slow-mysql.log
+
+-------------------索引------------------------
+mysql默认存储引擎innodb只显式支持B-Tree( 从技术上来说是B+Tree)索引
+
+索引的原理：B+tree
+
+查看索引
+  SHOW INDEX FROM table_name\G
+
+创建索引
+CREATE  [UNIQUE ] INDEX indexName ON mytable(columnname(length));
+ALTER TABLE 表名 ADD  [UNIQUE ]  INDEX [indexName] ON (columnname(length))
+
+删除索引
+DROP INDEX [indexName] ON mytable;
+
+--------------执行计划-----------------------
+explain +SQL语句
+作用：分析你的查询语句或是表结构的性能瓶颈
+执行计划包含的信息
+1.id
+id:表示查询中执行select子句或操作表的顺序
+三种情况
+id相同，执行顺序由上至下
+id不同，如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行
+id相同不同，同时存在,id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行
+
+2.select_type:查询的类型，主要是用于区别
+              普通查询、联合查询、子查询等的复杂查询
+
+SIMPLE	简单的 select 查询,查询中不包含子查询或者UNION
+PRIMARY	查询中若包含任何复杂的子部分，最外层查询则被标记为
+SUBQUERY	在SELECT或WHERE列表中包含了子查询
+DERIVED	在FROM列表中包含的子查询被标记为DERIVED(衍生)
+MySQL会递归执行这些子查询, 把结果放在临时表里。
+UNION	若第二个SELECT出现在UNION之后，则被标记为UNION；
+若UNION包含在FROM子句的子查询中,外层SELECT将被标记为：DERIVED
+UNION RESULT	从UNION表获取结果的SELECT
+
+3.table
+显示这一行的数据是关于哪张表的
+
+4.type :类型，如ALL就是全表扫描
+system>const>eq_ref>ref>range>index>ALL
+const
+表示通过索引一次就找到了
+eq_ref
+    唯一性索引扫描，对于每个索引键，表中只有一条记录与之匹配。常见于主键或唯一索引扫描
+ref
+ 非唯一性索引扫描，返回匹配某个单独值的所有行.
+range
+只检索给定范围的行,使用一个索引来选择行。key 列显示使用了哪个索引
+一般就是在你的where语句中出现了between、<、>、in等的查询
+index
+当查询结果全为索引列时，也是全表扫描的一种，仅仅比all性能好
+扫描整个索引文件，只是不去扫描真实数据文件
+all
+Full Table Scan，将遍历全表以找到匹配的行
+
+5.possible_keys：可能使用的索引。如果为NULL，则没有使用索引
+key:实际使用的索引-----重点看这个
+6.ref：显示索引的哪一列被使用了
+
+
+索引建立多了，也会影响性能，在增删的时候，索引需要维护
+某一列相对唯一，如性别的列，不适合建立索引
+经常来查询的列，时候建立索引
+经常用来关联的列where条件中用到的列，以及join 用到的列--建立索引
+
+--------------------------MySQL优化-----------------------------
+1.尽量全值匹配：在有联合索引时，where后面尽量把联合索引的列全部用上
+
+2.最佳左前缀原则：让索引不失效，如(name,age,pos)是联合索引的顺序
+如果在使用的时候，name排在最前面不能丢，那么索引有效，否则索引失效
+失效例子: where age =10 或 where pos =10
+相当于name就是火车头，火车头没了，火车就没用了
+还有，火车车身没用了，火车尾也没用了
+
+3.不要在索引列做任何操作，如计算，left(name,4),否则导致索引失效
+
+4.范围条件放最后
+如在联合索引中，有age>20的话，pos就会失效，应将age>20放在最后面就好了
+
+5.尽量用覆盖索引
+    少用select*,使用select name 索引列
+
+6.不等于要慎用
+可能导致索引失效，导致全局扫描
+在覆盖索引，不等于貌似不会导致索引失效
+
+7.NULL和Not null
+表设计中not null
+ is not null 会导致索引失效
+ is null 不会导致索引失效，是压根不会查询
+ 表中对not null没有打勾
+ is null 不会导致索引失效
+ is not null 会导致索引失效
+
+ 8.like查询要当心
+ like以通配符开头('%abc...')mysql索引失效会变成全表扫描的操作
+注意like后面%放在前面会失效，%放在后面，索引不失效  like%不失效
+
+9.字符类型加引号
+不加''，索引会失效
+
+10.OR改UNION效率高
+or 会导致索引失效，使用union不会导致索引失效
+
+
+葵花宝典：
+全值匹配我最爱，最左前缀要遵守；
+
+带头大哥不能死，中间兄弟不能断；
+
+索引列上少计算，范围之后全失效；
+
+LIKE百分写最右，覆盖索引不写*；
+
+不等空值还有OR，索引影响要注意；
+
+charvar号不可丢， SQL优化有诀窍。
+
+------------------批量提交------------------------
+
+提交前关闭自动提交
+ 尽量使用批量insert语句
+ 可以使用MyISAM存储引擎
+
+ conn.setAutoCommit(false);
+
+         br.lines().forEach(sql->{
+             try {
+                 PreparedStatement ps = conn.prepareStatement(sql);
+                ps.addBatch();  //
+                 if((i%2000)!=0 && i<=2097152) {
+                     i++;
+                 }else {
+                     ps.executeBatch(); //批量插入
+                     conn.commit();
+                     i=0;
+                 }
+
+
+LOAD DATA INFLIE；-----几十万数据几秒就搞定了
+使用LOAD DATA INFLIE ,比一般的insert语句快20倍
+
+select * into OUTFILE 'D:\\product.txt' from product_info
+
+load data INFILE 'D:\\product.txt' into table product_info
+
+
+
+
+
+
 
 
 
