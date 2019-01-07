@@ -42,6 +42,9 @@
         <option value="$PROJECT_DIR$/XXLJobDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SecretDemo/pom.xml" />
         <option value="$PROJECT_DIR$/TestDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/RPCDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/RPCClientDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/RPCServerDemo/pom.xml" />
       </list>
     </option>
   </component>

@@ -22,6 +22,9 @@
         <module name="NginxDemo" />
         <module name="NIODemo" />
         <module name="RedisDemo" />
+        <module name="RPCClientDemo" />
+        <module name="RPCDemo" />
+        <module name="RPCServerDemo" />
         <module name="SecretDemo" />
         <module name="SpringAOPTransactionDemo" />
         <module name="SpringBootDemo" />
@@ -63,6 +66,9 @@
       <module name="NignxDemo" target="1.5" />
       <module name="NIODemo" target="1.7" />
       <module name="RedisDemo" target="1.6" />
+      <module name="RPCClientDemo" target="1.7" />
+      <module name="RPCDemo" target="1.7" />
+      <module name="RPCServerDemo" target="1.6" />
       <module name="SecretDemo" target="1.8" />
       <module name="SocketDemo_main" target="1.8" />
       <module name="SocketDemo_test" target="1.8" />

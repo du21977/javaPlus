@@ -16,7 +16,7 @@ public class TcpClinet {
 
 	public static void main(String[] args) throws IOException {
 		System.out.println("socket启动....");
-		//连接到服务器ip和端口号
+		//连接到服务器ip和端口号---服务器ip-192.168.1.3
 		Socket s = new Socket("192.168.1.3", 8080);
 		//字节流形式传输
 		OutputStream outputStream = s.getOutputStream();
