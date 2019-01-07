@@ -20,6 +20,7 @@ public class TcpServer {
 		Socket accept = serverSocket.accept();
 		InputStream inputStream = accept.getInputStream();
 		byte[] buf= new byte[1024];
+		//读缓冲区数据
 		int len=inputStream.read(buf);
 		String str =new String(buf,0,len);
 		System.out.println("str:"+str);
