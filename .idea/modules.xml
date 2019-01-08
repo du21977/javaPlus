@@ -22,8 +22,10 @@
       <module fileurl="file://$PROJECT_DIR$/MyCollection/MyCollection.iml" filepath="$PROJECT_DIR$/MyCollection/MyCollection.iml" />
       <module fileurl="file://$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" filepath="$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NIODemo/NIODemo.iml" filepath="$PROJECT_DIR$/NIODemo/NIODemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NettyCometDemo/NettyCometDemo.iml" filepath="$PROJECT_DIR$/NettyCometDemo/NettyCometDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NettyDemo/NettyDemo.iml" filepath="$PROJECT_DIR$/NettyDemo/NettyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NettyDemo1/NettyDemo1.iml" filepath="$PROJECT_DIR$/NettyDemo1/NettyDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NettyEduDemo/NettyEduDemo.iml" filepath="$PROJECT_DIR$/NettyEduDemo/NettyEduDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NginxDemo/NginxDemo.iml" filepath="$PROJECT_DIR$/NginxDemo/NginxDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/RPCDemo/Prepare.iml" filepath="$PROJECT_DIR$/RPCDemo/Prepare.iml" />
       <module fileurl="file://$PROJECT_DIR$/RPCClientDemo/RPCClientDemo.iml" filepath="$PROJECT_DIR$/RPCClientDemo/RPCClientDemo.iml" />
@@ -54,6 +56,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" filepath="$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZookeeperDemo/ZookeeperDemo.iml" filepath="$PROJECT_DIR$/ZookeeperDemo/ZookeeperDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket/websocket.iml" filepath="$PROJECT_DIR$/websocket/websocket.iml" />
     </modules>
   </component>
 </project>

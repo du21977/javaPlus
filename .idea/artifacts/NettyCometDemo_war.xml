@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NettyCometDemo:war">
+    <output-path>$PROJECT_DIR$/NettyCometDemo/target</output-path>
+    <root id="archive" name="NettyCometDemo.war">
+      <element id="artifact" artifact-name="NettyCometDemo:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,4 @@
+本工程，展示了SpringBoot如何集成纯WebSocket的页面。
+
+localhost:8080/ws
+localhost:8080/api/ws/sendAll?message=hahha

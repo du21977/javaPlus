@@ -1,0 +1,10 @@
+
+
+Netty 搞一个http
+在浏览器中输入：
+1270.0.0.1:6789/test
+刷新2次返回结果不同
+
+用到netty的框架
+Dubbo
+SpringCloud中的Eureka

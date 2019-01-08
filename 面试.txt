@@ -18,6 +18,10 @@ ReentrantLock--可重入锁---可以解决死锁问题----可设置超时自动�
 6.1. volatile和synchronized的区别
 synchronized：原子性、互斥性、可见性
 volatile ：可见性、禁止重排序----复合操作不能保证原子性，就是多个线程可同时操作
+volatile修饰变量，synchronized修饰代码块和方法
+使用场景：volatile----单个线程操作变量，然后while循环判断该变量的改变
+            synchronized---高并发，多个线程同时操作共享变量
+  volatile不能保证原子性，AutomicIntreager能修饰变量保证原子性
 6.2. JMM -JAVA Memory Model java内存模型
     并发编程中如何处理可见性、原子性、有序性的问题
     java内存模型:共享变量在主内存中，各个线程共享变量时，会从主内存中复制一份到线程自己的工作内存中，

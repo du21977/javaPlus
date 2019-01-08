@@ -5,3 +5,14 @@
 
 序列化有哪些协议？
 json,xml
+
+在NettyEduDemo中ch02中serializable
+在RPCDemo,RPCClientDemo,RPCServerDemo中有对象序列化
+序列化：将对象转成字节码
+反序列化：将字节码转成对象
+序列化作用：
+1.网络传输-----传输都是01
+2.对象持久化
+
+java自带的序列化效率不高
+可以用第三方序列化工具MsgPack
