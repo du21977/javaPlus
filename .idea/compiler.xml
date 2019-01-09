@@ -39,6 +39,7 @@
         <module name="SpringCloudOrderService" />
         <module name="SpringCloudZuul" />
         <module name="SpringDemo" />
+        <module name="SpringEduDemo" />
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
         <module name="TestDemo" />
@@ -93,6 +94,7 @@
       <module name="SpringCloudOrderService" target="1.8" />
       <module name="SpringCloudZuul" target="1.8" />
       <module name="SpringDemo" target="1.5" />
+      <module name="SpringEduDemo" target="1.7" />
       <module name="SpringIOC_main" target="1.8" />
       <module name="SpringIOC_test" target="1.8" />
       <module name="SpringIOCDemo" target="1.8" />

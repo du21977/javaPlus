@@ -51,6 +51,7 @@
         <option value="$PROJECT_DIR$/websocket/pom.xml" />
         <option value="$PROJECT_DIR$/NettyWebsocketDemo/pom.xml" />
         <option value="$PROJECT_DIR$/NettyAdvantage/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringEduDemo/pom.xml" />
       </list>
     </option>
   </component>

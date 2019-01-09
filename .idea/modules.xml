@@ -47,6 +47,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringCloudOrderService/SpringCloudOrderService.iml" filepath="$PROJECT_DIR$/SpringCloudOrderService/SpringCloudOrderService.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringCloudZuul/SpringCloudZuul.iml" filepath="$PROJECT_DIR$/SpringCloudZuul/SpringCloudZuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringDemo/SpringDemo.iml" filepath="$PROJECT_DIR$/SpringDemo/SpringDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringEduDemo/SpringEduDemo.iml" filepath="$PROJECT_DIR$/SpringEduDemo/SpringEduDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" filepath="$PROJECT_DIR$/SpringIOCDemo/SpringIOCDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringIOC_main.iml" group="SpringIOC" />
