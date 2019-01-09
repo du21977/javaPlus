@@ -31,9 +31,11 @@ public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter {
 			MyMessage heartBeat = buildHeatBeat();
 			LOG.info("Send heart beat response message to client : ---> "
 					+ heartBeat);
+			//发送心跳包
 			ctx.writeAndFlush(heartBeat);
 			ReferenceCountUtil.release(msg);
 		} else
+			//如果是其他报文，传播给后面的Handler
 			ctx.fireChannelRead(msg);
     }
 

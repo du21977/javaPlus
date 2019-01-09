@@ -63,9 +63,10 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter {
 			ReferenceCountUtil.release(msg);
 		}
 		/*注释后，可演示消息不往下传递的情况*/
-//		else {
-//			ctx.fireChannelRead(msg);
-//		}
+		else {
+			//传播给后面的Handler
+			ctx.fireChannelRead(msg);
+		}
     }
 
     private MyMessage buildResponse(byte result) {

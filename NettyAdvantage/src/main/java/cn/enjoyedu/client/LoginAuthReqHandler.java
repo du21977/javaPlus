@@ -37,9 +37,11 @@ public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
             } else {
                 LOG.info("Login is ok : " + message);
+                //传播给后面的Handler
                 ctx.fireChannelRead(msg);
             }
         } else
+            //如果是其他报文，传播给后面的Handler
             ctx.fireChannelRead(msg);
     }
 
