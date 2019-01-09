@@ -5,8 +5,10 @@
     <file url="file://$PROJECT_DIR$/ActiveMQProducerDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JVMDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MySQLDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyAdvantage" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyCometDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NettyEduDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyWebsocketDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RPCClientDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RPCDemo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RPCServerDemo" charset="UTF-8" />

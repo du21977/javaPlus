@@ -17,10 +17,12 @@
         <module name="MyBatisORMDemo" />
         <module name="MyCollection" />
         <module name="MySQLDemo" />
+        <module name="NettyAdvantage" />
         <module name="NettyCometDemo" />
         <module name="NettyDemo" />
         <module name="NettyDemo1" />
         <module name="NettyEduDemo" />
+        <module name="NettyWebsocketDemo" />
         <module name="NginxDemo" />
         <module name="NIODemo" />
         <module name="RedisDemo" />
@@ -63,10 +65,12 @@
       <module name="MyBatisORMDemo" target="1.8" />
       <module name="MyCollection" target="1.5" />
       <module name="MySQLDemo" target="1.6" />
+      <module name="NettyAdvantage" target="7" />
       <module name="NettyCometDemo" target="1.7" />
       <module name="NettyDemo" target="1.6" />
       <module name="NettyDemo1" target="1.5" />
       <module name="NettyEduDemo" target="7" />
+      <module name="NettyWebsocketDemo" target="7" />
       <module name="NginxDemo" target="1.5" />
       <module name="NignxDemo" target="1.5" />
       <module name="NIODemo" target="1.7" />
