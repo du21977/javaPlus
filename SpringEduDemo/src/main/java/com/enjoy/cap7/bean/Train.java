@@ -10,6 +10,8 @@ public class Train implements InitializingBean, DisposableBean{
 	public Train(){
 		System.out.println("Train......constructor............");
 	}
+
+
 	//当我们bean销毁时,调用此方法
 	@Override
 	public void destroy() throws Exception {

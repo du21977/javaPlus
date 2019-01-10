@@ -14,8 +14,10 @@ import com.enjoy.cap2.controller.OrderController;
 
 @Configuration
 //@Controller  @Service  @Respostry  @Component
-@ComponentScan(value="com.enjoy.cap2", includeFilters={		
-		@Filter(type=FilterType.ANNOTATION, classes={Controller.class})		
+//type=FilterType.ANNOTATION--CUSTOM
+@ComponentScan(value="com.enjoy.cap2", includeFilters={
+		//@Filter(type=FilterType.ANNOTATION, classes={Controller.class})
+		@Filter(type=FilterType.CUSTOM, classes={JamesTypeFilter.class}) //自定义过滤器
 }, useDefaultFilters=false)
 
 

@@ -1,0 +1,35 @@
+
+
+@Scope
+单实例 Singleton：创建IOC容器的时候实例bean就被创建了
+多实例 prototype：仅当bean被使用的时候才创建
+
+BeanFactory:从我们的容器中获取实例化的bean
+FactoryBean:将我们的实例化bean通过FactoryBean注入到容器中
+
+bean的生命周期
+创建(构造函数)--初始化init--销毁destroy
+bean对象会放入Map中，销毁会从Map中移除
+
+
+@PropertySource(value="classpath:/test.properties")
+@Value("${bird.color}")
+	private String color;
+通过属性文件给对象里的属性赋值
+
+-------
+找bean
+@Qualifier("testDao")//指定名称来加载，一般作为@Autowired()的修饰用
+@Autowired //根据类型指定-----自动寻找类型按照优先找@Primary修饰的bean
+
+@Resource(name="")//默认按name注入，可以通过name和type属性进行选择性注入
+@Inject //和Autowired功能差不多，但是要引入第三方jar包，不支持Autowired的required=false,找不到bean会报错
+private TestDao testDao;//如果使用Autowired, testDao2, 找到TestDao类型的
+
+Autowired 支持容器中找不到bean不会报错，其他的Resource和Inject会报错
+
+Autowired用的最多
+--------------
+
+
+

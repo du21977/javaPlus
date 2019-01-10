@@ -21,7 +21,7 @@ public class Cap10Test {
 	public void test01(){
 		AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Cap10MainConfig.class);
 		
-		//Calculator c = new Calculator();
+//		Calculator c = new Calculator();
 		Calculator c = app.getBean(Calculator.class);
 		int result = c.div(4, 2);
 		System.out.println(result);

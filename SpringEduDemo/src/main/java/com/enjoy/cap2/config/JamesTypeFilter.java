@@ -29,7 +29,7 @@ public class JamesTypeFilter implements TypeFilter{
 		
 		String className = classMetadata.getClassName();
 		System.out.println("----->"+className);
-		if(className.contains("order")){//当类包含er字符, 则匹配成功,返回true
+		if(className.contains("er")){//当类包含er字符, 则匹配成功,返回true
 			return true;
 		}
 		return false;

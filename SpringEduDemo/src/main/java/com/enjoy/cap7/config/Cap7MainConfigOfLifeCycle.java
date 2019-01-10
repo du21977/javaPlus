@@ -15,6 +15,9 @@ public class Cap7MainConfigOfLifeCycle {
 		System.out.println("给容器中添加person.......");
 		return new Person("person",20);
 	}
+
+
+	//这种方式搞bean的生命周期最常见
 	@Bean(initMethod="init", destroyMethod="destory")
 	public Bike bike(){
 		return new Bike();
