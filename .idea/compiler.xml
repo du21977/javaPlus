@@ -42,6 +42,7 @@
         <module name="SpringEduDemo" />
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
+        <module name="SpringMVCEduDemo" />
         <module name="TestDemo" />
         <module name="websocket" />
         <module name="XXLJobDemo" />
@@ -63,6 +64,7 @@
       <module name="JavaPlus_main" target="1.8" />
       <module name="JavaPlus_test" target="1.8" />
       <module name="JVMDemo" target="1.7" />
+      <module name="MyBatisEduDemo" target="1.5" />
       <module name="MyBatisORMDemo" target="1.8" />
       <module name="MyCollection" target="1.5" />
       <module name="MySQLDemo" target="1.6" />
@@ -99,6 +101,7 @@
       <module name="SpringIOC_test" target="1.8" />
       <module name="SpringIOCDemo" target="1.8" />
       <module name="SpringMVCDemo" target="1.8" />
+      <module name="SpringMVCEduDemo" target="1.7" />
       <module name="TestDemo" target="1.7" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />

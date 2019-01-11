@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/SpringBootDemo1" />
     <file type="web" url="file://$PROJECT_DIR$/SpringBootDemo2" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVCEduDemo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -52,6 +53,7 @@
         <option value="$PROJECT_DIR$/NettyWebsocketDemo/pom.xml" />
         <option value="$PROJECT_DIR$/NettyAdvantage/pom.xml" />
         <option value="$PROJECT_DIR$/SpringEduDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVCEduDemo/pom.xml" />
       </list>
     </option>
   </component>
