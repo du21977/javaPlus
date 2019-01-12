@@ -18,6 +18,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_main.iml" group="JavaPlus" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaPlus_test.iml" group="JavaPlus" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatisEduDemo1/MyBatisEduDemo1.iml" filepath="$PROJECT_DIR$/MyBatisEduDemo1/MyBatisEduDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatisEduDemo2/MyBatisEduDemo2.iml" filepath="$PROJECT_DIR$/MyBatisEduDemo2/MyBatisEduDemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatisEduDemo3/MyBatisEduDemo3.iml" filepath="$PROJECT_DIR$/MyBatisEduDemo3/MyBatisEduDemo3.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyBatisORMDemo/MyBatisORMDemo.iml" filepath="$PROJECT_DIR$/MyBatisORMDemo/MyBatisORMDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyCollection/MyCollection.iml" filepath="$PROJECT_DIR$/MyCollection/MyCollection.iml" />
       <module fileurl="file://$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" filepath="$PROJECT_DIR$/MySQLDemo/MySQLDemo.iml" />

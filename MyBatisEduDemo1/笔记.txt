@@ -1,0 +1,76 @@
+
+Mybatis是一个面向接口的编程
+
+SqlSessionFactoryBuilder 读取配置文件创建SqlSessionFactory
+SqlSessionFactory的作用
+1.里面有配置信息----mapper.xml（每张表对应一个mapper）
+2.里面维护了一个数据库连接池
+3.生命周期是整个程序的生命周期
+
+SqlSession:代表一次数据库连接，线程不安全，生命周期是方法级别的
+
+mapper.xml中
+ResultType和ResultMap
+两者只能选一个
+表中字段怎么转换到类对象
+ResultType:用MyBatis默认配置的驼峰式映射到类对象，自动映射
+ResultMap:自定义转换规则，表中字段怎么映射到类对象
+
+parameterType 三种传参方式
+1.传参方式1，使用map，不推荐使用
+2.传参方式2：使用注解传参,小于5个参数
+3.传参方式2：传对象 大于5个参数
+
+
+<insert id="insert2" parameterType="TUser">
+
+		<selectKey  keyProperty="id" order="AFTER" resultType="int">
+			select LAST_INSERT_ID()
+		</selectKey>
+
+
+#{} ，预编译了，能防止sql注入-----原理就是在传的字段上加了单引号''
+${}，动态传值，但是不能防止sql注入,如想查询哪一列，动态传哪一列
+
+
+注解的MyBatis不建议用，可读性可维护性差，复杂 的查询也很难做
+所以还是建议用xml的方式做
+
+sql重用 include
+<sql id="Base_Column_List">
+		id, user_name, real_name, sex, mobile, email, note,
+		position_id
+</sql>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from t_user
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+
+--------------------动态SQL--------------------------
+if
+set
+where
+foreach
+
+批量添加数据
+方式1------foreach
+ insert into t_user (user_name, real_name) values ( ?, ? ) , ( ?, ? )
+ 方式2-----使用Batch类型的excutor
+ 手动关闭自动提交---设置成手动提交
+ statement .addBatch(sql)
+ statement .addBatch(sql)
+ statement.executeBatch();  //批量执行
+conn.commit()
+
+
+----------------------generate-自动生成代码-----------------------
+
+https://blog.csdn.net/liudongdong0909/article/details/51534735
+注意要有BaseEntity
+见MyBatisEduDemo3
+还可以代码生成
+见MyBatisEduDemo3中test中
