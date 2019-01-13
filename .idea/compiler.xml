@@ -17,6 +17,7 @@
         <module name="MyBatisEduDemo1" />
         <module name="MyBatisEduDemo2" />
         <module name="MyBatisEduDemo3" />
+        <module name="MyBatisEduDemo4" />
         <module name="MyBatisORMDemo" />
         <module name="MyCollection" />
         <module name="MySQLDemo" />
@@ -72,6 +73,7 @@
       <module name="MyBatisEduDemo1" target="1.7" />
       <module name="MyBatisEduDemo2" target="1.7" />
       <module name="MyBatisEduDemo3" target="1.7" />
+      <module name="MyBatisEduDemo4" target="1.8" />
       <module name="MyBatisORMDemo" target="1.8" />
       <module name="MyCollection" target="1.5" />
       <module name="MySQLDemo" target="1.6" />

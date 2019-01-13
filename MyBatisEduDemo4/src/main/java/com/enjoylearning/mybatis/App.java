@@ -1,7 +1,8 @@
 package com.enjoylearning.mybatis;
 
 /**
- * genarater生成代码
+ * 1.级联查询
+ * 2.缓存
  *
  */
 public class App 
