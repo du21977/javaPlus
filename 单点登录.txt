@@ -1,0 +1,7 @@
+
+
+
+单点登录解决方案：
+    1.nginx   ip_hash
+    2.redis  首选
+    3.CAS

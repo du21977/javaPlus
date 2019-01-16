@@ -48,6 +48,7 @@
         <module name="SpringMVCDemo" />
         <module name="SpringMVCEduDemo" />
         <module name="TestDemo" />
+        <module name="ThreadEduDemo" />
         <module name="websocket" />
         <module name="XXLJobDemo" />
         <module name="ZookeeperDemo" />
@@ -114,6 +115,7 @@
       <module name="TestDemo" target="1.7" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />
+      <module name="ThreadEduDemo" target="1.7" />
       <module name="websocket" target="1.7" />
       <module name="XXLJobDemo" target="1.6" />
       <module name="ZookeeperDemo" target="1.5" />

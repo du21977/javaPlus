@@ -60,6 +60,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringMVCEduDemo/SpringMVCEduDemo.iml" filepath="$PROJECT_DIR$/SpringMVCEduDemo/SpringMVCEduDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDemo/TestDemo.iml" filepath="$PROJECT_DIR$/TestDemo/TestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadEduDemo/ThreadEduDemo.iml" filepath="$PROJECT_DIR$/ThreadEduDemo/ThreadEduDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_main.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thread_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Thread_test.iml" group="Thread" />
       <module fileurl="file://$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" filepath="$PROJECT_DIR$/XXLJobDemo/XXLJobDemo.iml" />
