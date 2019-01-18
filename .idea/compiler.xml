@@ -47,6 +47,8 @@
         <module name="SpringIOCDemo" />
         <module name="SpringMVCDemo" />
         <module name="SpringMVCEduDemo" />
+        <module name="SpringMVCHeimaDemo" />
+        <module name="StrustsDemo" />
         <module name="TestDemo" />
         <module name="ThreadEduDemo" />
         <module name="websocket" />
@@ -69,7 +71,7 @@
       <module name="DubboOrderConsumer" target="1.5" />
       <module name="JavaPlus_main" target="1.8" />
       <module name="JavaPlus_test" target="1.8" />
-      <module name="JVMDemo" target="1.7" />
+      <module name="JVMDemo" target="1.8" />
       <module name="MyBatisEduDemo" target="1.5" />
       <module name="MyBatisEduDemo1" target="1.7" />
       <module name="MyBatisEduDemo2" target="1.7" />
@@ -112,6 +114,9 @@
       <module name="SpringIOCDemo" target="1.8" />
       <module name="SpringMVCDemo" target="1.8" />
       <module name="SpringMVCEduDemo" target="1.7" />
+      <module name="SpringMVCHeimaDemo" target="1.7" />
+      <module name="StrustsDemo" target="1.7" />
+      <module name="StrutsDemo" target="1.5" />
       <module name="TestDemo" target="1.7" />
       <module name="Thread_main" target="1.8" />
       <module name="Thread_test" target="1.8" />

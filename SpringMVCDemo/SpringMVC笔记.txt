@@ -26,3 +26,8 @@ SpringMVC步骤：
 ####3.1从map集合中获取url对应的类对象，获取url对应的方法名，使用反射机制执行
 ####3.2反射执行完后，返回的结果请求转发到视图解析器上去
 
+
+
+SpringMVC与 Struts2区别
+SpringMVC，系统初始化时，创建一个servlet,单例，消耗资源少
+Struts2，没来一个请求，就创建一个实例化动作类，Action

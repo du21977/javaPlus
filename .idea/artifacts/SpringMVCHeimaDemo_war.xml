@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringMVCHeimaDemo:war">
+    <output-path>$PROJECT_DIR$/SpringMVCHeimaDemo/target</output-path>
+    <root id="archive" name="SpringMVCHeimaDemo.war">
+      <element id="artifact" artifact-name="SpringMVCHeimaDemo:war exploded" />
+    </root>
+  </artifact>
+</component>

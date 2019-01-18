@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/SpringBootDemo2" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCEduDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVCHeimaDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/StrustsDemo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -59,6 +61,8 @@
         <option value="$PROJECT_DIR$/MyBatisEduDemo3/pom.xml" />
         <option value="$PROJECT_DIR$/MyBatisEduDemo4/pom.xml" />
         <option value="$PROJECT_DIR$/ThreadEduDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVCHeimaDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/StrustsDemo/pom.xml" />
       </list>
     </option>
   </component>

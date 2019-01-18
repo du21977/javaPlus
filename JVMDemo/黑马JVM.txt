@@ -1,0 +1,125 @@
+
+
+-Xint
+运行一行，执行一行字节码
+-Xcomp
+JVM在第一次使用时会把所有的字节码编译成本地代码，
+从而带来最大程度的优化。
+
+-XX参数，主要用于调优
+-XX:+DisableExplicitGC 表示禁用手动调用gc操作，也就是说调用
+System.gc()无效
+-XX:NewRatio=1 表示新生代和老年代的比值
+-Xms与-Xmx分别是设置jvm的堆内存的初始大小和最大大小
+-Xmx2048m：等价于-XX:MaxHeapSize，设置JVM最大堆内存为2048M
+-Xms512m：等价于-XX:InitialHeapSize，设置JVM初始堆内存为512M
+‐XX:+UseParNewGC   串行垃圾收集器
+‐XX:+PrintGCDetails  打印垃圾回收详细信息
+‐Xms16m ‐Xmx16m    初始和最大堆内存大小
+
+1.7和1.8内存内存结构的
+1.7有永久代，即方法区
+1.8没有永久代，取而代之的是Metaspace元数据空间，在本地内存
+
+------------查看jvm运行情况-------------------------
+打开运行tomcat
+在命令行输入jps
+有Bootstrap端口号 5812
+jstat ‐gc 5812
+可以查看到gc各个堆内存区的使用情况 如 eden s0 s1 老年代区
+
+jstat ‐heap 5812
+查看各内存使用情况
+
+jmap dump
+对内存情况dump到文件中
+
+通过jhat命令对dump命令进行分析
+
+
+
+给配置参数，超过1M就报内存溢出错误，并且生成Dump文件
+ -Xms1m -Xmx1m -XX:+HeapDumpOnOutOfMemoryError
+ 然后用Mat工具对hprof快照文件进行分析
+
+
+ jstack 端口号
+ 查看每个线程运行情况
+ 查看死锁情况
+ jstack 进程id端口
+ Find deadlock
+
+
+ VisualVM监控本地和远程JVM
+
+
+垃圾回收器
+
+---------串行和并行垃圾收集器---------
+-XX:+UseSerialGC   串行垃圾收集器
+‐XX:+PrintGCDetails  打印垃圾回收详细信息
+‐Xms16m ‐Xmx16m    初始和最大堆内存大小
+ -Xms1m -Xmx1m ‐XX:+UseParNewGC ‐XX:+PrintGCDetails
+-XX:+UseParNewGC
+参数设置年轻代使用ParNew回收器，老年代使用的依然是串行
+收集器
+-XX:+UseSerialGC
+指定年轻代和老年代都使用串行垃圾收集器
+-XX:+PrintGCDetails
+打印垃圾回收的详细信息
+ -XX:+UseParallelGC
+ 年轻代使用ParallelGC垃圾回收器，老年代使用串行回收器。
+ -XX:+UseParallelOldGC
+ 年轻代使用ParallelGC垃圾回收器，老年代使用ParallelOldGC垃圾回收器。
+
+
+ -----CMS垃圾收集器----
+ 垃圾标记和清除时，用户线程不用暂停了，重新标记用户线程需要暂停
+ CMS垃圾收集器是针对在老年代中使用的，年轻带使用的是并行垃圾收集器
+
+
+G1垃圾收集器
+jdk1.7正式使用的垃圾收集器
+简化了JVM调优，我们只需要设置下面三步
+1. 第一步，开启G1垃圾收集器
+2. 第二步，设置堆的最大内存
+3. 第三步，设置最大的停顿时间
+G1中提供了三种模式垃圾回收模式，Young GC、Mixed GC 和 Full GC，在不同的条件
+下被触发
+Mixed GC回收部分老年代，还采用了CMS垃圾收集器
+老年代超过45%时，会触发Mixed GC
+
+G1 垃圾收集器参数
+XX:+UseG1GC
+使用 G1 垃圾收集器
+-XX:MaxGCPauseMillis
+设置期望达到的最大GC停顿时间指标（JVM会尽力实现，但不保证达到），默认
+值是 200 毫秒。
+-XX:G1HeapRegionSize=n
+设置的 G1 区域的大小。值是 2 的幂，范围是 1 MB 到 32 MB 之间。目标是根
+据最小的 Java 堆大小划分出约 2048 个区域。
+默认是堆内存的1/2000。
+-XX:ParallelGCThreads=n
+设置 STW 工作线程数的值。将 n 的值设置为逻辑处理器的数量。n 的值与逻辑
+处理器的数量相同，最多为 8。
+-XX:ConcGCThreads=n
+北京市昌平区建材城西路金燕龙办公楼一层 电话：400-618-9090
+传智播客设置并行标记的线程数。将 n 设置为并行垃圾回收线程数 (ParallelGCThreads)
+的 1/4 左右。
+-XX:InitiatingHeapOccupancyPercent=n
+设置触发标记周期的 Java 堆占用率阈值。默认占用率是整个 Java 堆的 45
+
+
+----GC日志分析-----
+在日志打印输出涉及到的参数如下
+‐XX:+PrintGC 输出GC日志
+‐XX:+PrintGCDetails 输出GC的详细日志
+‐XX:+PrintGCTimeStamps 输出GC的时间戳（以基准时间的形式）
+‐XX:+PrintGCDateStamps 输出GC的时间戳（以日期的形式，如 2013‐05‐
+04T21:53:59.234+0800）
+‐XX:+PrintHeapAtGC 在进行GC的前后打印出堆的信息
+‐Xloggc:../logs/gc.log 日志文件的输出路径
+
+用GC Easy可视化工具
+GC Easy是一款在线的可视化工具，易用、功能强大，网站
+http://gceasy.io/

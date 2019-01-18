@@ -1,0 +1,59 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <!-- 开启开发者模式 -->
+    <constant name="struts.devMode" value="true"></constant>
+
+    <!-- 配置国际化的资源包位置-->
+    <constant name="struts.custom.i18n.resources" value="com.itheima.resource.message"></constant>
+
+
+    <!-- 定义一个公共包，用于配置结果类型 -->
+    <package name="myDefault" extends="struts-default" abstract="true">
+        <result-types>
+            <result-type name="captcha" class="com.itheima.web.results.CaptchaResult"></result-type>
+        </result-types>
+    </package>
+
+    <!-- 使用自定义结果类型的配置-->
+    <package name="p2" extends="myDefault">
+        <!-- 动作配置：可以使用默认动作类和默认动作方法 -->
+        <action name="captchaAction">
+            <result name="success" type="captcha">
+                <param name="width">640</param>
+                <param name="height">480</param>
+            </result>
+        </action>
+    </package>
+
+
+
+    <!-- 配置动作类所在的包-->
+    <package name="p1" extends="struts-default">
+        <!-- 配置动作-->
+        <action name="hello" class="com.itheima.web.action.HelloAction" method="sayHello">
+            <result name="success" type="dispatcher">/success.jsp</result>
+        </action>
+
+        <action name="demo1" class="com.itheima.web.action.Hello2Action" method="demo1">
+            <result name="success" type="dispatcher">/demo1.jsp</result>
+        </action>
+        
+        <action name="demo2" class="com.itheima.web.action.Hello3Action" method="demo2">
+            <result name="success" type="redirect">demo2.jsp</result>
+        </action>
+
+        <!-- OGNL表达式的细节 -->
+        <action name="demo4" class="com.itheima.web.action.Hello4Action" method="demo4">
+            <result name="success" type="dispatcher">demo4.jsp</result>
+        </action>
+
+        <!-- 国际化 -->
+        <action name="demo5" class="com.itheima.web.action.Hello5Action" method="demo5">
+            <result name="success" type="dispatcher">demo5.jsp</result>
+        </action>
+
+    </package>
+</struts>
